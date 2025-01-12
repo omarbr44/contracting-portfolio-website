@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إتقان برو - بنك يضعك في الاعتبار</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="app.js"></script>
+    <style>
+      .carousel-container {
+            overflow: hidden;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out; /* Smooth transitions */
+        }
+    </style>
+</head>
+<body style="direction: rtl;font-family: Tajawal, sans-serif;">
+  <nav class="bg-gradient-to-r from-site-shapes to-cyan-600 lg:py-8 py-4 px-16 sm:px-6 flex justify-between w-full fixed top-0 z-[39]"
+       data-aos="fade-up" data-aos-duration="1500">
+    <div class="flex items-center ">
+        <a href="" class=" bg-white p-2 rounded-lg">
+            <img src="img/logo.png" alt="logo" width="120">
+        </a>
+        <div class="mr-8 text-xl text-white lg:block hidden">
+            <a href="about-us-ar.html">
+                عنا
+            </a>
+            <span class="mx-4">|</span>
+            <a href="index.html">
+                English
+            </a>
+        </div>
+    </div>
+    <div class="lg:flex items-center hidden">
+        <button class="text-white text-xl ml-8" onclick="showWaitlistModal()">حالة الانتظار</button>
+        <a href="" class="bg-white px-8 py-2 text-xl text-site-shapes rounded-xl">حمل التطبيق</a>
+    </div>
+    <button type="button" onclick="showHideNav()" class="nav-button lg:hidden relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+        <span class="absolute -inset-0.5"></span>
+        <span class="sr-only">Open main menu</span>
+        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+    </button>
+    <section id="mobile-nav" class="hidden">
+        <div class="flex items-center justify-between h-1/6">
+            <a href="" >
+                <img src="img/logo.png" alt="logo" width="110">
+            </a>
+            <button type="button" onclick="showHideNav()" class="nav-button lg:hidden relative inline-flex items-center justify-center rounded-md p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div class="flex flex-col justify-between h-5/6">
+            <div class="text-2xl text-site-primary flex flex-col gap-7 mt-1">
+                <a href="about-us-ar.html">عنا</a>
+                <a href="index.html">English</a>
+            </div>
+            <div class="flex flex-col gap-5 w-full text-center mb-8">
+                <a href="" class="text-xl w-full bg-site-shapes text-white rounded-xl py-3">حمل التطبيق</a>
+                <button style="border: 1px solid;" onclick="showWaitlistModal()" class="text-xl w-full bg-white text-site-shapes border-site-shapes rounded-xl py-3">حالة الانتظار</button>
+            </div>
+        </div>
+    </section>
+</nav>
+<section class="hero-section h-[120vh] relative m-6 sm:m-2">
+  <div data-poster-url="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a%2F674d7c6410556e8afd177598_propiz-hero-bg-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a%2F674d7c6410556e8afd177598_propiz-hero-bg-transcode.mp4,https://cdn.prod.website-files.com/6743f5d1f34136345172b17a%2F674d7c6410556e8afd177598_propiz-hero-bg-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="hero-bg-video">
+    <video id="c505e51a-9262-74f7-657f-ccc952c80bf5-video" autoplay="" loop="" style="background-image:url(&quot;https://cdn.prod.website-files.com/6743f5d1f34136345172b17a%2F674d7c6410556e8afd177598_propiz-hero-bg-poster-00001.jpg&quot;);" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+      <source src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a%2F674d7c6410556e8afd177598_propiz-hero-bg-transcode.mp4" data-wf-ignore="true">
+      <source src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a%2F674d7c6410556e8afd177598_propiz-hero-bg-transcode.webm" data-wf-ignore="true">
+    </video>
+  </div>
+    <div 
+      class="hero-content lg:pt-52 md:pt-40 sm:pt-44 lg:px-28 sm:px-5 py-10 gap-10 flex flex-col lg:w-3/4 relative z-10 ">
+      <h1 class="text-white border border-white rounded-lg text-xl font-bold h-fit w-fit py-1 px-4">البنك معك في الاعتبار</h1>
+      <h1 class="text-white text-6xl md:text-5xl sm:text-4xl font-bold">استكشف الفرص العقارية المتميزة بثقة اليوم.</h1>
+    </div>
+    <div class=" absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center w-[90%]">
+      <div class="buttons-wrapper flex text-2xl font-bold">
+        <button class="bg-white w-44 h-20 rounded-ss-2xl">شراء</button>
+        <button class="bg-site-section w-44 rounded-se-2xl h-20">تأجير</button>
+      </div>
+      <div class="filters-wrapper w-full bg-site-section py-10 flex flex-wrap gap-5 items-center justify-center rounded-ss-xl rounded-se-xl">
+        <input
+         type="text"
+         placeholder="اكتب الاسم"
+         class="h-11 w-[15%] md:w-[30%] sm:w-[45%] px-4 py-3 border border-[#0d0e13] rounded-xl text-lg"
+        >
+        <select   
+          class="h-11 w-[15%] md:w-[30%] sm:w-[45%] px-4 py-1 border border-[#0d0e13] rounded-xl text-lg"
+        >
+        <option value="ادخل النوع">ادخل النوع</option>
+        <option value="a">شقة</option>
+        <option value="b">فلة</option>
+        <option value="c">للإيجار</option>
+        </select>
+        <select   
+          class="h-11 w-[15%] md:w-[30%] sm:w-[45%] px-4 py-1 border border-[#0d0e13] rounded-xl text-lg"
+        >
+        <option value="ادخل السعر">ادخل السعر</option>
+        <option value="a">1000 ريال</option>
+        <option value="b">5000 ريال</option>
+        <option value="c">10000 ريال</option>
+        </select>
+        <select   
+          class="h-11 w-[15%] md:w-[30%] sm:w-[45%] px-4 py-1 border border-[#0d0e13] rounded-xl text-lg"
+        >
+        <option value="ادخل المكان">ادخل المكان</option>
+        <option value="a">جدة</option>
+        <option value="b">مكة</option>
+        <option value="c">الرياض</option>
+        </select>
+        <div class="cursor-pointer h-11 w-[15%] md:w-[30%] sm:w-[45%] px-4 py-1 border border-[#0d0e13] rounded-xl text-lg flex items-center gap-1 bg-white relative">
+          <div onclick="toggleAdvanceFilter()" class="w-full flex gap-1">
+            <img src="img/filter.png">
+            <p class="cursor-pointer">البحث المتقدم</p>
+          </div>
+          <div 
+            style="transition-property: height;transition-duration: 200ms;transform-origin: bottom;" 
+            id="advance-filter-section" 
+            class=" h-0 w-full bg-site-section shadow-md rounded-2xl absolute -top-full -translate-y-[70%] left-0 overflow-auto flex flex-col items-center"
+          >
+            <select   
+              class="h-11 w-[80%] px-4 py-1 my-3 border border-[#0d0e13] rounded-xl"
+            >
+              <option value="ادخل المكان">ادخل المكان</option>
+              <option value="a">جدة</option>
+              <option value="c">الرياض</option>
+            </select>
+            <select   
+              class="h-11 w-[80%] px-4 py-1 border border-[#0d0e13] rounded-xl"
+            >
+              <option value="ادخل المكان">ادخل المكان</option>
+              <option value="a">جدة</option>
+              <option value="b">مكة</option>
+              <option value="c">الرياض</option>
+            </select>
+            <select   
+              class="h-11 w-[80%] px-4 py-1 my-3 border border-[#0d0e13] rounded-xl"
+            >
+              <option value="ادخل المكان">ادخل المكان</option>
+              <option value="a">جدة</option>
+              <option value="b">مكة</option>
+              <option value="c">الرياض</option>
+            </select>
+          </div>
+        </div>
+        <button class="bg-site-primary py-2 px-8 rounded-lg text-white text-lg font-bold md:w-[30%] sm:w-[45%]">ابحث</button>
+      </div>
+    </div>
+</section>
+<section class=" bg-site-section m-6 sm:m-2 px-16 sm:px-4 py-20 rounded-xl">
+  <div class="flex flex-col lg:flex-row gap-10 justify-between items-center">
+    <h1 class="w-1/2 sm:w-[80%] text-5xl sm:text-4xl font-bold sm:text-center md:text-center">شغوف بكونك مختلفًا ومخلصًا</h1>
+    <p class="lg:w-[40%] w-[90%] text-lg lg:border-r-[2px] sm:text-center md:text-center border-site-primary px-9">يكمن شغفنا في تقديم حلول عقارية فريدة من نوعها مع البقاء مخلصين لأحلام عملائنا وأهدافهم. نحن نعيد تعريف السوق مع الالتزام بالتميز وتقديم نتائج قائمة على الثقة.
+    </p>
+  </div>
+  <div class="flex flex-col lg:flex-row justify-evenly items-center gap-8 mt-20">
+    <div class="lg:w-1/3 w-full">
+      <img src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/6746d73d65758cf637456162_about-us-img-2.jpg" 
+           alt="img"
+           class="w-full rounded-xl"
+      >
+      <h1 class="text-xl font-bold mt-4">شغوف بكونك مختلفًا ومخلصًا</h1>
+      <p class="text-site-p mt-4">يكمن شغفنا في تقديم حلول عقارية فريدة من نوعها مع البقاء مخلصين لأحلام عملائنا وأهدافهم. نحن نعيد تعريف السوق مع الالتزام بالتميز وتقديم نتائج قائمة على الثقة.</p>
+    </div>
+    <div class="lg:w-1/3 w-full">
+      <img src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/6746d73d65758cf637456162_about-us-img-2.jpg" 
+           alt="img"
+           class="w-full rounded-xl"
+      >
+      <h1 class="text-xl font-bold mt-4">شغوف بكونك مختلفًا ومخلصًا</h1>
+      <p class="text-site-p mt-4">يكمن شغفنا في تقديم حلول عقارية فريدة من نوعها مع البقاء مخلصين لأحلام عملائنا وأهدافهم. نحن نعيد تعريف السوق مع الالتزام بالتميز وتقديم نتائج قائمة على الثقة.</p>
+    </div>
+    <div class="lg:w-1/3 w-full">
+      <img src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/6746d73d65758cf637456162_about-us-img-2.jpg" 
+           alt="img"
+           class="w-full rounded-xl"
+      >
+      <h1 class="text-xl font-bold mt-4">شغوف بكونك مختلفًا ومخلصًا</h1>
+      <p class="text-site-p mt-4">يكمن شغفنا في تقديم حلول عقارية فريدة من نوعها مع البقاء مخلصين لأحلام عملائنا وأهدافهم. نحن نعيد تعريف السوق مع الالتزام بالتميز وتقديم نتائج قائمة على الثقة.</p>
+    </div>
+  </div>
+</section>
+<section class="counter-section m-6 sm:m-2 px-16 sm:px-4 py-36 rounded-xl bg-site-secondary relative">
+  <img 
+    src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/6746e3078b3edfa8d06a46f6_building-bg-shape.png"
+    class=" absolute bottom-0 left-0 w-[30%]"
+  >
+  <div class="flex justify-between gap-10 sm:flex-col sm:items-center mb-10">
+    <p class="text-white text-2xl">عن الفريق</p>
+    <p class="text-white text-4xl md:text-3xl sm:text-2xl font-bold lg:w-[60%] w-full px-10 sm:text-center">نحن ملتزمون بتقديم رؤى وتوجيهات ومساعدة استثنائية في كل مرحلة من رحلتك العقارية.</p>
+  </div>
+  <hr>
+  <div class="counters flex items-center md:flex-wrap sm:flex-wrap gap-y-10 justify-evenly mt-10">
+    <div class="text-center md:w-1/2 sm:w-1/2">
+      <h1 class="text-site-primary text-5xl sm:text-3xl font-bold">2000+</h1>
+      <p class="text-white text-xl sm:text-base font-bold">عملاء سعداء</p>
+    </div>
+    <div class="text-center md:w-1/2 sm:w-1/2">
+      <h1 class="text-site-primary text-5xl sm:text-3xl font-bold">2000+</h1>
+      <p class="text-white text-xl sm:text-base font-bold">عملاء سعداء</p>
+    </div>
+    <div class="text-center md:w-1/2 sm:w-1/2">
+      <h1 class="text-site-primary text-5xl sm:text-3xl font-bold">2000+</h1>
+      <p class="text-white text-xl sm:text-base font-bold">عملاء سعداء</p>
+    </div>
+    <div class="text-center md:w-1/2 sm:w-1/2">
+      <h1 class="text-site-primary text-5xl sm:text-3xl font-bold">2000+</h1>
+      <p class="text-white text-xl sm:text-base font-bold">عملاء سعداء</p>
+    </div>
+  </div>
+</section>
+  <div class="container mx-auto my-10">
+    <div class="flex justify-center items-center mb-8">
+        <button class="px-4 py-2 w-1/4 rounded-md bg-gray-200 text-gray-700  mr-2 active" data-tab="all">الكل</button>
+        <button class="px-4 py-2 w-1/4 rounded-md bg-gray-200 text-gray-700 mr-2" data-tab="apartments">شقق</button>
+        <button class="px-4 py-2 w-1/4 rounded-md bg-gray-200 text-gray-700 mr-2" data-tab="villas">فلل</button>
+        <button class="px-4 py-2 w-1/4 rounded-md bg-gray-200 text-gray-700 mr-2" data-tab="resort">مجمعات</button>
+    </div>
+
+    <div id="all" class="grid grid-cols-2 sm:grid-cols-1 gap-4" data-info="all">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="overflow-hidden card-img-container">
+            <img 
+             src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d771917c5b4b7ff6af478_serene-suburban-p-800.jpg" alt="Image 1" class="w-full h-80 object-cover">
+          </div>
+            <div class="flex justify-between items-center py-4 px-6">
+              <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d6f79c808f4282ca65937_review-icon-5star.png" alt="stars">
+              <p class=" bg-[#f5f5f5] text-site-secondary text-lg font-bold px-2 py-1 rounded-xl">مجمعات</p>
+            </div>
+            <div class="py-4 px-6">
+              <h2 class="text-lg font-semibold">مجمع سكني</h2>
+              <p class="text-gray-600">وصف المجمع السكني</p>
+            </div>
+            <div class="flex justify-evenly items-center py-4 px-6">
+              <div class="flex items-center gap-2">
+                <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d6fb6b4208b9e97af3c05_bedroom-icon.png">
+                <p class=" text-site-secondary text-lg font-bold">4</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d6fbc54bec9dac0419093_barthroom-icon.png">
+                <p class=" text-site-secondary text-lg font-bold">5</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d90dc26a706f790594186_scale-miter.png">
+                <p class=" text-site-secondary text-lg font-bold">6</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between py-4 px-6">
+              <p class="text-site-secondary text-3xl ">1,800.00 SR <sub class="text-xl text-[#696969]">شهريا</sub></p>
+              <a class="border border-site-primary p-4 rounded-lg text-site-primary hover:text-white hover:bg-site-primary transition-all" href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M4 12L12 4" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M5.5 4H12V10.5" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="overflow-hidden card-img-container">
+            <img 
+             src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/6746d73d65758cf637456162_about-us-img-2.jpg" alt="Image 1" class="w-full h-80 object-cover">
+          </div>            <div class="flex justify-between items-center py-4 px-6">
+              <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d6f79c808f4282ca65937_review-icon-5star.png" alt="stars">
+              <p class=" bg-[#f5f5f5] text-site-secondary text-lg font-bold px-2 py-1 rounded-xl">مجمعات</p>
+            </div>
+            <div class="py-4 px-6">
+              <h2 class="text-lg font-semibold">مجمع سكني</h2>
+              <p class="text-gray-600">وصف المجمع السكني</p>
+            </div>
+            <div class="flex justify-evenly items-center py-4 px-6">
+              <div class="flex items-center gap-2">
+                <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d6fb6b4208b9e97af3c05_bedroom-icon.png">
+                <p class=" text-site-secondary text-lg font-bold">4</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d6fbc54bec9dac0419093_barthroom-icon.png">
+                <p class=" text-site-secondary text-lg font-bold">5</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d90dc26a706f790594186_scale-miter.png">
+                <p class=" text-site-secondary text-lg font-bold">6</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between py-4 px-6">
+              <p class="text-site-secondary text-3xl ">1,800.00 SR <sub class="text-xl text-[#696969]">شهريا</sub></p>
+              <a class="border border-site-primary p-4 rounded-lg text-site-primary hover:text-white hover:bg-site-primary transition-all" href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M4 12L12 4" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M5.5 4H12V10.5" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+            </div>
+        </div>
+        </div>
+
+    <div id="apartments" class="hidden grid grid-cols-2 sm:grid-cols-1 gap-4" data-info="apartments">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="overflow-hidden card-img-container">
+          <img 
+           src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d771917c5b4b7ff6af478_serene-suburban-p-800.jpg" alt="Image 1" class="w-full h-80 object-cover">
+        </div>
+          <div class="flex justify-between items-center py-4 px-6">
+            <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d6f79c808f4282ca65937_review-icon-5star.png" alt="stars">
+            <p class=" bg-[#f5f5f5] text-site-secondary text-lg font-bold px-2 py-1 rounded-xl">مجمعات</p>
+          </div>
+          <div class="py-4 px-6">
+            <h2 class="text-lg font-semibold">مجمع سكني</h2>
+            <p class="text-gray-600">وصف المجمع السكني</p>
+          </div>
+          <div class="flex justify-evenly items-center py-4 px-6">
+            <div class="flex items-center gap-2">
+              <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d6fb6b4208b9e97af3c05_bedroom-icon.png">
+              <p class=" text-site-secondary text-lg font-bold">4</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d6fbc54bec9dac0419093_barthroom-icon.png">
+              <p class=" text-site-secondary text-lg font-bold">5</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d90dc26a706f790594186_scale-miter.png">
+              <p class=" text-site-secondary text-lg font-bold">6</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between py-4 px-6">
+            <p class="text-site-secondary text-3xl ">1,800.00 SR <sub class="text-xl text-[#696969]">شهريا</sub></p>
+            <a class="border border-site-primary p-4 rounded-lg text-site-primary hover:text-white hover:bg-site-primary transition-all" href="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4 12L12 4" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M5.5 4H12V10.5" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+          </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="overflow-hidden card-img-container">
+          <img 
+           src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/6746d73d65758cf637456162_about-us-img-2.jpg" alt="Image 1" class="w-full h-80 object-cover">
+        </div>            <div class="flex justify-between items-center py-4 px-6">
+            <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d6f79c808f4282ca65937_review-icon-5star.png" alt="stars">
+            <p class=" bg-[#f5f5f5] text-site-secondary text-lg font-bold px-2 py-1 rounded-xl">مجمعات</p>
+          </div>
+          <div class="py-4 px-6">
+            <h2 class="text-lg font-semibold">مجمع سكني</h2>
+            <p class="text-gray-600">وصف المجمع السكني</p>
+          </div>
+          <div class="flex justify-evenly items-center py-4 px-6">
+            <div class="flex items-center gap-2">
+              <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d6fb6b4208b9e97af3c05_bedroom-icon.png">
+              <p class=" text-site-secondary text-lg font-bold">4</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d6fbc54bec9dac0419093_barthroom-icon.png">
+              <p class=" text-site-secondary text-lg font-bold">5</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d90dc26a706f790594186_scale-miter.png">
+              <p class=" text-site-secondary text-lg font-bold">6</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between py-4 px-6">
+            <p class="text-site-secondary text-3xl ">1,800.00 SR <sub class="text-xl text-[#696969]">شهريا</sub></p>
+            <a class="border border-site-primary p-4 rounded-lg text-site-primary hover:text-white hover:bg-site-primary transition-all" href="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4 12L12 4" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M5.5 4H12V10.5" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+          </div>
+      </div>
+        </div>
+
+    <div id="villas" class="hidden grid grid-cols-2 sm:grid-cols-1 gap-4" data-info="villas">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="overflow-hidden card-img-container">
+          <img 
+           src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/6746d73d65758cf637456162_about-us-img-2.jpg" alt="Image 1" class="w-full h-80 object-cover">
+        </div>            <div class="flex justify-between items-center py-4 px-6">
+            <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d6f79c808f4282ca65937_review-icon-5star.png" alt="stars">
+            <p class=" bg-[#f5f5f5] text-site-secondary text-lg font-bold px-2 py-1 rounded-xl">مجمعات</p>
+          </div>
+          <div class="py-4 px-6">
+            <h2 class="text-lg font-semibold">مجمع سكني</h2>
+            <p class="text-gray-600">وصف المجمع السكني</p>
+          </div>
+          <div class="flex justify-evenly items-center py-4 px-6">
+            <div class="flex items-center gap-2">
+              <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d6fb6b4208b9e97af3c05_bedroom-icon.png">
+              <p class=" text-site-secondary text-lg font-bold">4</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d6fbc54bec9dac0419093_barthroom-icon.png">
+              <p class=" text-site-secondary text-lg font-bold">5</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d90dc26a706f790594186_scale-miter.png">
+              <p class=" text-site-secondary text-lg font-bold">6</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between py-4 px-6">
+            <p class="text-site-secondary text-3xl ">1,800.00 SR <sub class="text-xl text-[#696969]">شهريا</sub></p>
+            <a class="border border-site-primary p-4 rounded-lg text-site-primary hover:text-white hover:bg-site-primary transition-all" href="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4 12L12 4" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M5.5 4H12V10.5" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+          </div>
+      </div>
+        </div>
+
+    <div id="resort" class="hidden grid grid-cols-2 sm:grid-cols-1 gap-4" data-info="resort">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="overflow-hidden card-img-container">
+          <img 
+           src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d771917c5b4b7ff6af478_serene-suburban-p-800.jpg" alt="Image 1" class="w-full h-80 object-cover">
+        </div>
+          <div class="flex justify-between items-center py-4 px-6">
+            <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d6f79c808f4282ca65937_review-icon-5star.png" alt="stars">
+            <p class=" bg-[#f5f5f5] text-site-secondary text-lg font-bold px-2 py-1 rounded-xl">مجمعات</p>
+          </div>
+          <div class="py-4 px-6">
+            <h2 class="text-lg font-semibold">مجمع سكني</h2>
+            <p class="text-gray-600">وصف المجمع السكني</p>
+          </div>
+          <div class="flex justify-evenly items-center py-4 px-6">
+            <div class="flex items-center gap-2">
+              <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d6fb6b4208b9e97af3c05_bedroom-icon.png">
+              <p class=" text-site-secondary text-lg font-bold">4</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d6fbc54bec9dac0419093_barthroom-icon.png">
+              <p class=" text-site-secondary text-lg font-bold">5</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674d90dc26a706f790594186_scale-miter.png">
+              <p class=" text-site-secondary text-lg font-bold">6</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between py-4 px-6">
+            <p class="text-site-secondary text-3xl ">1,800.00 SR <sub class="text-xl text-[#696969]">شهريا</sub></p>
+            <a class="border border-site-primary p-4 rounded-lg text-site-primary hover:text-white hover:bg-site-primary transition-all" href="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4 12L12 4" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M5.5 4H12V10.5" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+          </div>
+      </div>
+        </div>
+</div>
+<section class="container mx-auto my-10"> 
+  <div class="grid grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-4">
+    <div class=" w-full h-52 text-site-primary flex flex-col items-center bg-site-section rounded-2xl">
+      <svg class="my-10" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+        <g clip-path="url(#clip0_9900_1484)">
+          <path d="M54.0546 0H36.2069C33.4455 0 31.199 2.24649 31.199 5.00786V24.5544C31.199 27.3158 33.4455 29.5624 36.2069 29.5624H41.4933V39.4607L37.6419 34.1082C36.3312 32.2869 34.2053 31.1994 31.9549 31.1994H22.2115C20.0473 31.1994 17.9702 32.221 16.6553 33.9322L10.5143 41.9238H9.02219C4.56424 41.9238 0.937408 45.5509 0.937408 50.0094V54.8631C0.937408 55.5103 1.46212 56.0349 2.10917 56.0349H7.81422C8.34819 58.3043 10.3958 59.9999 12.8349 59.9999C15.2739 59.9999 17.3216 58.3042 17.8555 56.0349H27.5946C28.1285 58.3043 30.1762 59.9999 32.6153 59.9999C35.0544 59.9999 37.1021 58.3042 37.6359 56.0349H41.4931V58.8282C41.4931 59.4754 42.0178 60 42.6649 60H47.5964C48.2434 60 48.7681 59.4754 48.7681 58.8282V29.5624H54.0545C56.8159 29.5624 59.0624 27.3159 59.0624 24.5544V5.00786C59.0626 2.24649 56.8161 0 54.0546 0ZM18.5135 35.3601C19.3879 34.2223 20.7704 33.5429 22.2115 33.5429H31.9549C33.4534 33.5429 34.8681 34.266 35.7397 35.4771L40.3784 41.9238H13.4698L18.5135 35.3601ZM3.28093 50.0094C3.28093 46.8431 5.85645 44.2673 9.02219 44.2673H22.3002V53.6914H17.8555C17.3215 51.4219 15.2739 49.7263 12.8347 49.7263C10.3956 49.7263 8.34796 51.4219 7.81399 53.6914H3.28093V50.0094ZM12.8349 57.6564C11.2831 57.6564 10.0206 56.4033 10.0206 54.8631C10.0206 53.3229 11.283 52.0698 12.8349 52.0698C14.3867 52.0698 15.6491 53.3229 15.6491 54.8631C15.6491 56.4033 14.3866 57.6564 12.8349 57.6564ZM32.6154 57.6564C31.0637 57.6564 29.8011 56.4033 29.8011 54.8631C29.8011 53.3229 31.0636 52.0698 32.6154 52.0698C34.1673 52.0698 35.4296 53.3229 35.4296 54.8631C35.4295 56.4033 34.1672 57.6564 32.6154 57.6564ZM37.6361 53.6912C37.1021 51.4218 35.0544 49.7261 32.6153 49.7261C30.1761 49.7261 28.1284 51.4218 27.5944 53.6912H24.6436V44.2672H41.4931V53.6912H37.6361ZM46.4247 57.6565H43.8368V29.5624H46.4247V57.6565ZM56.7191 24.5544C56.7191 26.0236 55.5239 27.2189 54.0547 27.2189H36.2069C34.7377 27.2189 33.5425 26.0236 33.5425 24.5544V5.00786C33.5425 3.53871 34.7377 2.34352 36.2069 2.34352H54.0546C55.5238 2.34352 56.719 3.53871 56.719 5.00786V24.5544H56.7191Z" fill="currentColor"></path>
+          <path d="M46.3749 6.94682H42.665C42.6646 6.94682 42.664 6.94682 42.6635 6.94682C42.0198 6.94108 41.4931 7.45923 41.4932 8.10288V8.11858V21.4035C41.4932 22.0276 41.9642 22.5725 42.5868 22.6129C43.2693 22.6572 43.8367 22.1166 43.8367 21.4437V16.8211C44.686 16.8165 45.7951 16.8112 46.3749 16.8112C49.1348 16.8112 51.3803 14.5986 51.3803 11.879C51.3803 9.15934 49.1348 6.94682 46.3749 6.94682ZM46.3749 14.4675C45.7979 14.4675 44.7038 14.4728 43.856 14.4774C43.8514 13.6053 43.846 12.468 43.846 11.8789C43.846 11.3808 43.843 10.1981 43.8403 9.29034H46.3749C47.8177 9.29034 49.0368 10.4758 49.0368 11.8789C49.0368 13.2822 47.8178 14.4675 46.3749 14.4675Z" fill="currentColor"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_9900_1484">
+            <rect width="60" height="60" fill="currentColor"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+      <p class=" text-site-secondary text-lg text-center font-bold">مواقف سيارات</p>
+    </div>
+    <div class=" w-full h-52 text-site-primary flex flex-col items-center bg-site-section rounded-2xl">
+      <svg class="my-10" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+        <g clip-path="url(#clip0_9900_1484)">
+          <path d="M54.0546 0H36.2069C33.4455 0 31.199 2.24649 31.199 5.00786V24.5544C31.199 27.3158 33.4455 29.5624 36.2069 29.5624H41.4933V39.4607L37.6419 34.1082C36.3312 32.2869 34.2053 31.1994 31.9549 31.1994H22.2115C20.0473 31.1994 17.9702 32.221 16.6553 33.9322L10.5143 41.9238H9.02219C4.56424 41.9238 0.937408 45.5509 0.937408 50.0094V54.8631C0.937408 55.5103 1.46212 56.0349 2.10917 56.0349H7.81422C8.34819 58.3043 10.3958 59.9999 12.8349 59.9999C15.2739 59.9999 17.3216 58.3042 17.8555 56.0349H27.5946C28.1285 58.3043 30.1762 59.9999 32.6153 59.9999C35.0544 59.9999 37.1021 58.3042 37.6359 56.0349H41.4931V58.8282C41.4931 59.4754 42.0178 60 42.6649 60H47.5964C48.2434 60 48.7681 59.4754 48.7681 58.8282V29.5624H54.0545C56.8159 29.5624 59.0624 27.3159 59.0624 24.5544V5.00786C59.0626 2.24649 56.8161 0 54.0546 0ZM18.5135 35.3601C19.3879 34.2223 20.7704 33.5429 22.2115 33.5429H31.9549C33.4534 33.5429 34.8681 34.266 35.7397 35.4771L40.3784 41.9238H13.4698L18.5135 35.3601ZM3.28093 50.0094C3.28093 46.8431 5.85645 44.2673 9.02219 44.2673H22.3002V53.6914H17.8555C17.3215 51.4219 15.2739 49.7263 12.8347 49.7263C10.3956 49.7263 8.34796 51.4219 7.81399 53.6914H3.28093V50.0094ZM12.8349 57.6564C11.2831 57.6564 10.0206 56.4033 10.0206 54.8631C10.0206 53.3229 11.283 52.0698 12.8349 52.0698C14.3867 52.0698 15.6491 53.3229 15.6491 54.8631C15.6491 56.4033 14.3866 57.6564 12.8349 57.6564ZM32.6154 57.6564C31.0637 57.6564 29.8011 56.4033 29.8011 54.8631C29.8011 53.3229 31.0636 52.0698 32.6154 52.0698C34.1673 52.0698 35.4296 53.3229 35.4296 54.8631C35.4295 56.4033 34.1672 57.6564 32.6154 57.6564ZM37.6361 53.6912C37.1021 51.4218 35.0544 49.7261 32.6153 49.7261C30.1761 49.7261 28.1284 51.4218 27.5944 53.6912H24.6436V44.2672H41.4931V53.6912H37.6361ZM46.4247 57.6565H43.8368V29.5624H46.4247V57.6565ZM56.7191 24.5544C56.7191 26.0236 55.5239 27.2189 54.0547 27.2189H36.2069C34.7377 27.2189 33.5425 26.0236 33.5425 24.5544V5.00786C33.5425 3.53871 34.7377 2.34352 36.2069 2.34352H54.0546C55.5238 2.34352 56.719 3.53871 56.719 5.00786V24.5544H56.7191Z" fill="currentColor"></path>
+          <path d="M46.3749 6.94682H42.665C42.6646 6.94682 42.664 6.94682 42.6635 6.94682C42.0198 6.94108 41.4931 7.45923 41.4932 8.10288V8.11858V21.4035C41.4932 22.0276 41.9642 22.5725 42.5868 22.6129C43.2693 22.6572 43.8367 22.1166 43.8367 21.4437V16.8211C44.686 16.8165 45.7951 16.8112 46.3749 16.8112C49.1348 16.8112 51.3803 14.5986 51.3803 11.879C51.3803 9.15934 49.1348 6.94682 46.3749 6.94682ZM46.3749 14.4675C45.7979 14.4675 44.7038 14.4728 43.856 14.4774C43.8514 13.6053 43.846 12.468 43.846 11.8789C43.846 11.3808 43.843 10.1981 43.8403 9.29034H46.3749C47.8177 9.29034 49.0368 10.4758 49.0368 11.8789C49.0368 13.2822 47.8178 14.4675 46.3749 14.4675Z" fill="currentColor"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_9900_1484">
+            <rect width="60" height="60" fill="currentColor"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+      <p class=" text-site-secondary text-lg text-center font-bold">مواقف سيارات</p>
+    </div>
+    <div class=" w-full h-52 text-site-primary flex flex-col items-center bg-site-section rounded-2xl">
+      <svg class="my-10" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+        <g clip-path="url(#clip0_9900_1484)">
+          <path d="M54.0546 0H36.2069C33.4455 0 31.199 2.24649 31.199 5.00786V24.5544C31.199 27.3158 33.4455 29.5624 36.2069 29.5624H41.4933V39.4607L37.6419 34.1082C36.3312 32.2869 34.2053 31.1994 31.9549 31.1994H22.2115C20.0473 31.1994 17.9702 32.221 16.6553 33.9322L10.5143 41.9238H9.02219C4.56424 41.9238 0.937408 45.5509 0.937408 50.0094V54.8631C0.937408 55.5103 1.46212 56.0349 2.10917 56.0349H7.81422C8.34819 58.3043 10.3958 59.9999 12.8349 59.9999C15.2739 59.9999 17.3216 58.3042 17.8555 56.0349H27.5946C28.1285 58.3043 30.1762 59.9999 32.6153 59.9999C35.0544 59.9999 37.1021 58.3042 37.6359 56.0349H41.4931V58.8282C41.4931 59.4754 42.0178 60 42.6649 60H47.5964C48.2434 60 48.7681 59.4754 48.7681 58.8282V29.5624H54.0545C56.8159 29.5624 59.0624 27.3159 59.0624 24.5544V5.00786C59.0626 2.24649 56.8161 0 54.0546 0ZM18.5135 35.3601C19.3879 34.2223 20.7704 33.5429 22.2115 33.5429H31.9549C33.4534 33.5429 34.8681 34.266 35.7397 35.4771L40.3784 41.9238H13.4698L18.5135 35.3601ZM3.28093 50.0094C3.28093 46.8431 5.85645 44.2673 9.02219 44.2673H22.3002V53.6914H17.8555C17.3215 51.4219 15.2739 49.7263 12.8347 49.7263C10.3956 49.7263 8.34796 51.4219 7.81399 53.6914H3.28093V50.0094ZM12.8349 57.6564C11.2831 57.6564 10.0206 56.4033 10.0206 54.8631C10.0206 53.3229 11.283 52.0698 12.8349 52.0698C14.3867 52.0698 15.6491 53.3229 15.6491 54.8631C15.6491 56.4033 14.3866 57.6564 12.8349 57.6564ZM32.6154 57.6564C31.0637 57.6564 29.8011 56.4033 29.8011 54.8631C29.8011 53.3229 31.0636 52.0698 32.6154 52.0698C34.1673 52.0698 35.4296 53.3229 35.4296 54.8631C35.4295 56.4033 34.1672 57.6564 32.6154 57.6564ZM37.6361 53.6912C37.1021 51.4218 35.0544 49.7261 32.6153 49.7261C30.1761 49.7261 28.1284 51.4218 27.5944 53.6912H24.6436V44.2672H41.4931V53.6912H37.6361ZM46.4247 57.6565H43.8368V29.5624H46.4247V57.6565ZM56.7191 24.5544C56.7191 26.0236 55.5239 27.2189 54.0547 27.2189H36.2069C34.7377 27.2189 33.5425 26.0236 33.5425 24.5544V5.00786C33.5425 3.53871 34.7377 2.34352 36.2069 2.34352H54.0546C55.5238 2.34352 56.719 3.53871 56.719 5.00786V24.5544H56.7191Z" fill="currentColor"></path>
+          <path d="M46.3749 6.94682H42.665C42.6646 6.94682 42.664 6.94682 42.6635 6.94682C42.0198 6.94108 41.4931 7.45923 41.4932 8.10288V8.11858V21.4035C41.4932 22.0276 41.9642 22.5725 42.5868 22.6129C43.2693 22.6572 43.8367 22.1166 43.8367 21.4437V16.8211C44.686 16.8165 45.7951 16.8112 46.3749 16.8112C49.1348 16.8112 51.3803 14.5986 51.3803 11.879C51.3803 9.15934 49.1348 6.94682 46.3749 6.94682ZM46.3749 14.4675C45.7979 14.4675 44.7038 14.4728 43.856 14.4774C43.8514 13.6053 43.846 12.468 43.846 11.8789C43.846 11.3808 43.843 10.1981 43.8403 9.29034H46.3749C47.8177 9.29034 49.0368 10.4758 49.0368 11.8789C49.0368 13.2822 47.8178 14.4675 46.3749 14.4675Z" fill="currentColor"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_9900_1484">
+            <rect width="60" height="60" fill="currentColor"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+      <p class=" text-site-secondary text-lg text-center font-bold">مواقف سيارات</p>
+    </div>
+    <div class=" w-full h-52 text-site-primary flex flex-col items-center bg-site-section rounded-2xl">
+      <svg class="my-10" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+        <g clip-path="url(#clip0_9900_1484)">
+          <path d="M54.0546 0H36.2069C33.4455 0 31.199 2.24649 31.199 5.00786V24.5544C31.199 27.3158 33.4455 29.5624 36.2069 29.5624H41.4933V39.4607L37.6419 34.1082C36.3312 32.2869 34.2053 31.1994 31.9549 31.1994H22.2115C20.0473 31.1994 17.9702 32.221 16.6553 33.9322L10.5143 41.9238H9.02219C4.56424 41.9238 0.937408 45.5509 0.937408 50.0094V54.8631C0.937408 55.5103 1.46212 56.0349 2.10917 56.0349H7.81422C8.34819 58.3043 10.3958 59.9999 12.8349 59.9999C15.2739 59.9999 17.3216 58.3042 17.8555 56.0349H27.5946C28.1285 58.3043 30.1762 59.9999 32.6153 59.9999C35.0544 59.9999 37.1021 58.3042 37.6359 56.0349H41.4931V58.8282C41.4931 59.4754 42.0178 60 42.6649 60H47.5964C48.2434 60 48.7681 59.4754 48.7681 58.8282V29.5624H54.0545C56.8159 29.5624 59.0624 27.3159 59.0624 24.5544V5.00786C59.0626 2.24649 56.8161 0 54.0546 0ZM18.5135 35.3601C19.3879 34.2223 20.7704 33.5429 22.2115 33.5429H31.9549C33.4534 33.5429 34.8681 34.266 35.7397 35.4771L40.3784 41.9238H13.4698L18.5135 35.3601ZM3.28093 50.0094C3.28093 46.8431 5.85645 44.2673 9.02219 44.2673H22.3002V53.6914H17.8555C17.3215 51.4219 15.2739 49.7263 12.8347 49.7263C10.3956 49.7263 8.34796 51.4219 7.81399 53.6914H3.28093V50.0094ZM12.8349 57.6564C11.2831 57.6564 10.0206 56.4033 10.0206 54.8631C10.0206 53.3229 11.283 52.0698 12.8349 52.0698C14.3867 52.0698 15.6491 53.3229 15.6491 54.8631C15.6491 56.4033 14.3866 57.6564 12.8349 57.6564ZM32.6154 57.6564C31.0637 57.6564 29.8011 56.4033 29.8011 54.8631C29.8011 53.3229 31.0636 52.0698 32.6154 52.0698C34.1673 52.0698 35.4296 53.3229 35.4296 54.8631C35.4295 56.4033 34.1672 57.6564 32.6154 57.6564ZM37.6361 53.6912C37.1021 51.4218 35.0544 49.7261 32.6153 49.7261C30.1761 49.7261 28.1284 51.4218 27.5944 53.6912H24.6436V44.2672H41.4931V53.6912H37.6361ZM46.4247 57.6565H43.8368V29.5624H46.4247V57.6565ZM56.7191 24.5544C56.7191 26.0236 55.5239 27.2189 54.0547 27.2189H36.2069C34.7377 27.2189 33.5425 26.0236 33.5425 24.5544V5.00786C33.5425 3.53871 34.7377 2.34352 36.2069 2.34352H54.0546C55.5238 2.34352 56.719 3.53871 56.719 5.00786V24.5544H56.7191Z" fill="currentColor"></path>
+          <path d="M46.3749 6.94682H42.665C42.6646 6.94682 42.664 6.94682 42.6635 6.94682C42.0198 6.94108 41.4931 7.45923 41.4932 8.10288V8.11858V21.4035C41.4932 22.0276 41.9642 22.5725 42.5868 22.6129C43.2693 22.6572 43.8367 22.1166 43.8367 21.4437V16.8211C44.686 16.8165 45.7951 16.8112 46.3749 16.8112C49.1348 16.8112 51.3803 14.5986 51.3803 11.879C51.3803 9.15934 49.1348 6.94682 46.3749 6.94682ZM46.3749 14.4675C45.7979 14.4675 44.7038 14.4728 43.856 14.4774C43.8514 13.6053 43.846 12.468 43.846 11.8789C43.846 11.3808 43.843 10.1981 43.8403 9.29034H46.3749C47.8177 9.29034 49.0368 10.4758 49.0368 11.8789C49.0368 13.2822 47.8178 14.4675 46.3749 14.4675Z" fill="currentColor"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_9900_1484">
+            <rect width="60" height="60" fill="currentColor"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+      <p class=" text-site-secondary text-lg text-center font-bold">مواقف سيارات</p>
+    </div>
+    <div class=" w-full h-52 text-site-primary flex flex-col items-center bg-site-section rounded-2xl">
+      <svg class="my-10" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+        <g clip-path="url(#clip0_9900_1484)">
+          <path d="M54.0546 0H36.2069C33.4455 0 31.199 2.24649 31.199 5.00786V24.5544C31.199 27.3158 33.4455 29.5624 36.2069 29.5624H41.4933V39.4607L37.6419 34.1082C36.3312 32.2869 34.2053 31.1994 31.9549 31.1994H22.2115C20.0473 31.1994 17.9702 32.221 16.6553 33.9322L10.5143 41.9238H9.02219C4.56424 41.9238 0.937408 45.5509 0.937408 50.0094V54.8631C0.937408 55.5103 1.46212 56.0349 2.10917 56.0349H7.81422C8.34819 58.3043 10.3958 59.9999 12.8349 59.9999C15.2739 59.9999 17.3216 58.3042 17.8555 56.0349H27.5946C28.1285 58.3043 30.1762 59.9999 32.6153 59.9999C35.0544 59.9999 37.1021 58.3042 37.6359 56.0349H41.4931V58.8282C41.4931 59.4754 42.0178 60 42.6649 60H47.5964C48.2434 60 48.7681 59.4754 48.7681 58.8282V29.5624H54.0545C56.8159 29.5624 59.0624 27.3159 59.0624 24.5544V5.00786C59.0626 2.24649 56.8161 0 54.0546 0ZM18.5135 35.3601C19.3879 34.2223 20.7704 33.5429 22.2115 33.5429H31.9549C33.4534 33.5429 34.8681 34.266 35.7397 35.4771L40.3784 41.9238H13.4698L18.5135 35.3601ZM3.28093 50.0094C3.28093 46.8431 5.85645 44.2673 9.02219 44.2673H22.3002V53.6914H17.8555C17.3215 51.4219 15.2739 49.7263 12.8347 49.7263C10.3956 49.7263 8.34796 51.4219 7.81399 53.6914H3.28093V50.0094ZM12.8349 57.6564C11.2831 57.6564 10.0206 56.4033 10.0206 54.8631C10.0206 53.3229 11.283 52.0698 12.8349 52.0698C14.3867 52.0698 15.6491 53.3229 15.6491 54.8631C15.6491 56.4033 14.3866 57.6564 12.8349 57.6564ZM32.6154 57.6564C31.0637 57.6564 29.8011 56.4033 29.8011 54.8631C29.8011 53.3229 31.0636 52.0698 32.6154 52.0698C34.1673 52.0698 35.4296 53.3229 35.4296 54.8631C35.4295 56.4033 34.1672 57.6564 32.6154 57.6564ZM37.6361 53.6912C37.1021 51.4218 35.0544 49.7261 32.6153 49.7261C30.1761 49.7261 28.1284 51.4218 27.5944 53.6912H24.6436V44.2672H41.4931V53.6912H37.6361ZM46.4247 57.6565H43.8368V29.5624H46.4247V57.6565ZM56.7191 24.5544C56.7191 26.0236 55.5239 27.2189 54.0547 27.2189H36.2069C34.7377 27.2189 33.5425 26.0236 33.5425 24.5544V5.00786C33.5425 3.53871 34.7377 2.34352 36.2069 2.34352H54.0546C55.5238 2.34352 56.719 3.53871 56.719 5.00786V24.5544H56.7191Z" fill="currentColor"></path>
+          <path d="M46.3749 6.94682H42.665C42.6646 6.94682 42.664 6.94682 42.6635 6.94682C42.0198 6.94108 41.4931 7.45923 41.4932 8.10288V8.11858V21.4035C41.4932 22.0276 41.9642 22.5725 42.5868 22.6129C43.2693 22.6572 43.8367 22.1166 43.8367 21.4437V16.8211C44.686 16.8165 45.7951 16.8112 46.3749 16.8112C49.1348 16.8112 51.3803 14.5986 51.3803 11.879C51.3803 9.15934 49.1348 6.94682 46.3749 6.94682ZM46.3749 14.4675C45.7979 14.4675 44.7038 14.4728 43.856 14.4774C43.8514 13.6053 43.846 12.468 43.846 11.8789C43.846 11.3808 43.843 10.1981 43.8403 9.29034H46.3749C47.8177 9.29034 49.0368 10.4758 49.0368 11.8789C49.0368 13.2822 47.8178 14.4675 46.3749 14.4675Z" fill="currentColor"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_9900_1484">
+            <rect width="60" height="60" fill="currentColor"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+      <p class=" text-site-secondary text-lg text-center font-bold">مواقف سيارات</p>
+    </div>
+    <div class=" w-full h-52 text-site-primary flex flex-col items-center bg-site-section rounded-2xl">
+      <svg class="my-10" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+        <g clip-path="url(#clip0_9900_1484)">
+          <path d="M54.0546 0H36.2069C33.4455 0 31.199 2.24649 31.199 5.00786V24.5544C31.199 27.3158 33.4455 29.5624 36.2069 29.5624H41.4933V39.4607L37.6419 34.1082C36.3312 32.2869 34.2053 31.1994 31.9549 31.1994H22.2115C20.0473 31.1994 17.9702 32.221 16.6553 33.9322L10.5143 41.9238H9.02219C4.56424 41.9238 0.937408 45.5509 0.937408 50.0094V54.8631C0.937408 55.5103 1.46212 56.0349 2.10917 56.0349H7.81422C8.34819 58.3043 10.3958 59.9999 12.8349 59.9999C15.2739 59.9999 17.3216 58.3042 17.8555 56.0349H27.5946C28.1285 58.3043 30.1762 59.9999 32.6153 59.9999C35.0544 59.9999 37.1021 58.3042 37.6359 56.0349H41.4931V58.8282C41.4931 59.4754 42.0178 60 42.6649 60H47.5964C48.2434 60 48.7681 59.4754 48.7681 58.8282V29.5624H54.0545C56.8159 29.5624 59.0624 27.3159 59.0624 24.5544V5.00786C59.0626 2.24649 56.8161 0 54.0546 0ZM18.5135 35.3601C19.3879 34.2223 20.7704 33.5429 22.2115 33.5429H31.9549C33.4534 33.5429 34.8681 34.266 35.7397 35.4771L40.3784 41.9238H13.4698L18.5135 35.3601ZM3.28093 50.0094C3.28093 46.8431 5.85645 44.2673 9.02219 44.2673H22.3002V53.6914H17.8555C17.3215 51.4219 15.2739 49.7263 12.8347 49.7263C10.3956 49.7263 8.34796 51.4219 7.81399 53.6914H3.28093V50.0094ZM12.8349 57.6564C11.2831 57.6564 10.0206 56.4033 10.0206 54.8631C10.0206 53.3229 11.283 52.0698 12.8349 52.0698C14.3867 52.0698 15.6491 53.3229 15.6491 54.8631C15.6491 56.4033 14.3866 57.6564 12.8349 57.6564ZM32.6154 57.6564C31.0637 57.6564 29.8011 56.4033 29.8011 54.8631C29.8011 53.3229 31.0636 52.0698 32.6154 52.0698C34.1673 52.0698 35.4296 53.3229 35.4296 54.8631C35.4295 56.4033 34.1672 57.6564 32.6154 57.6564ZM37.6361 53.6912C37.1021 51.4218 35.0544 49.7261 32.6153 49.7261C30.1761 49.7261 28.1284 51.4218 27.5944 53.6912H24.6436V44.2672H41.4931V53.6912H37.6361ZM46.4247 57.6565H43.8368V29.5624H46.4247V57.6565ZM56.7191 24.5544C56.7191 26.0236 55.5239 27.2189 54.0547 27.2189H36.2069C34.7377 27.2189 33.5425 26.0236 33.5425 24.5544V5.00786C33.5425 3.53871 34.7377 2.34352 36.2069 2.34352H54.0546C55.5238 2.34352 56.719 3.53871 56.719 5.00786V24.5544H56.7191Z" fill="currentColor"></path>
+          <path d="M46.3749 6.94682H42.665C42.6646 6.94682 42.664 6.94682 42.6635 6.94682C42.0198 6.94108 41.4931 7.45923 41.4932 8.10288V8.11858V21.4035C41.4932 22.0276 41.9642 22.5725 42.5868 22.6129C43.2693 22.6572 43.8367 22.1166 43.8367 21.4437V16.8211C44.686 16.8165 45.7951 16.8112 46.3749 16.8112C49.1348 16.8112 51.3803 14.5986 51.3803 11.879C51.3803 9.15934 49.1348 6.94682 46.3749 6.94682ZM46.3749 14.4675C45.7979 14.4675 44.7038 14.4728 43.856 14.4774C43.8514 13.6053 43.846 12.468 43.846 11.8789C43.846 11.3808 43.843 10.1981 43.8403 9.29034H46.3749C47.8177 9.29034 49.0368 10.4758 49.0368 11.8789C49.0368 13.2822 47.8178 14.4675 46.3749 14.4675Z" fill="currentColor"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_9900_1484">
+            <rect width="60" height="60" fill="currentColor"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+      <p class=" text-site-secondary text-lg text-center font-bold">مواقف سيارات</p>
+    </div>
+    <div class=" w-full h-52 text-site-primary flex flex-col items-center bg-site-section rounded-2xl">
+      <svg class="my-10" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+        <g clip-path="url(#clip0_9900_1484)">
+          <path d="M54.0546 0H36.2069C33.4455 0 31.199 2.24649 31.199 5.00786V24.5544C31.199 27.3158 33.4455 29.5624 36.2069 29.5624H41.4933V39.4607L37.6419 34.1082C36.3312 32.2869 34.2053 31.1994 31.9549 31.1994H22.2115C20.0473 31.1994 17.9702 32.221 16.6553 33.9322L10.5143 41.9238H9.02219C4.56424 41.9238 0.937408 45.5509 0.937408 50.0094V54.8631C0.937408 55.5103 1.46212 56.0349 2.10917 56.0349H7.81422C8.34819 58.3043 10.3958 59.9999 12.8349 59.9999C15.2739 59.9999 17.3216 58.3042 17.8555 56.0349H27.5946C28.1285 58.3043 30.1762 59.9999 32.6153 59.9999C35.0544 59.9999 37.1021 58.3042 37.6359 56.0349H41.4931V58.8282C41.4931 59.4754 42.0178 60 42.6649 60H47.5964C48.2434 60 48.7681 59.4754 48.7681 58.8282V29.5624H54.0545C56.8159 29.5624 59.0624 27.3159 59.0624 24.5544V5.00786C59.0626 2.24649 56.8161 0 54.0546 0ZM18.5135 35.3601C19.3879 34.2223 20.7704 33.5429 22.2115 33.5429H31.9549C33.4534 33.5429 34.8681 34.266 35.7397 35.4771L40.3784 41.9238H13.4698L18.5135 35.3601ZM3.28093 50.0094C3.28093 46.8431 5.85645 44.2673 9.02219 44.2673H22.3002V53.6914H17.8555C17.3215 51.4219 15.2739 49.7263 12.8347 49.7263C10.3956 49.7263 8.34796 51.4219 7.81399 53.6914H3.28093V50.0094ZM12.8349 57.6564C11.2831 57.6564 10.0206 56.4033 10.0206 54.8631C10.0206 53.3229 11.283 52.0698 12.8349 52.0698C14.3867 52.0698 15.6491 53.3229 15.6491 54.8631C15.6491 56.4033 14.3866 57.6564 12.8349 57.6564ZM32.6154 57.6564C31.0637 57.6564 29.8011 56.4033 29.8011 54.8631C29.8011 53.3229 31.0636 52.0698 32.6154 52.0698C34.1673 52.0698 35.4296 53.3229 35.4296 54.8631C35.4295 56.4033 34.1672 57.6564 32.6154 57.6564ZM37.6361 53.6912C37.1021 51.4218 35.0544 49.7261 32.6153 49.7261C30.1761 49.7261 28.1284 51.4218 27.5944 53.6912H24.6436V44.2672H41.4931V53.6912H37.6361ZM46.4247 57.6565H43.8368V29.5624H46.4247V57.6565ZM56.7191 24.5544C56.7191 26.0236 55.5239 27.2189 54.0547 27.2189H36.2069C34.7377 27.2189 33.5425 26.0236 33.5425 24.5544V5.00786C33.5425 3.53871 34.7377 2.34352 36.2069 2.34352H54.0546C55.5238 2.34352 56.719 3.53871 56.719 5.00786V24.5544H56.7191Z" fill="currentColor"></path>
+          <path d="M46.3749 6.94682H42.665C42.6646 6.94682 42.664 6.94682 42.6635 6.94682C42.0198 6.94108 41.4931 7.45923 41.4932 8.10288V8.11858V21.4035C41.4932 22.0276 41.9642 22.5725 42.5868 22.6129C43.2693 22.6572 43.8367 22.1166 43.8367 21.4437V16.8211C44.686 16.8165 45.7951 16.8112 46.3749 16.8112C49.1348 16.8112 51.3803 14.5986 51.3803 11.879C51.3803 9.15934 49.1348 6.94682 46.3749 6.94682ZM46.3749 14.4675C45.7979 14.4675 44.7038 14.4728 43.856 14.4774C43.8514 13.6053 43.846 12.468 43.846 11.8789C43.846 11.3808 43.843 10.1981 43.8403 9.29034H46.3749C47.8177 9.29034 49.0368 10.4758 49.0368 11.8789C49.0368 13.2822 47.8178 14.4675 46.3749 14.4675Z" fill="currentColor"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_9900_1484">
+            <rect width="60" height="60" fill="currentColor"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+      <p class=" text-site-secondary text-lg text-center font-bold">مواقف سيارات</p>
+    </div>
+    <div class=" w-full h-52 text-site-primary flex flex-col items-center bg-site-section rounded-2xl">
+      <svg class="my-10" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+        <g clip-path="url(#clip0_9900_1484)">
+          <path d="M54.0546 0H36.2069C33.4455 0 31.199 2.24649 31.199 5.00786V24.5544C31.199 27.3158 33.4455 29.5624 36.2069 29.5624H41.4933V39.4607L37.6419 34.1082C36.3312 32.2869 34.2053 31.1994 31.9549 31.1994H22.2115C20.0473 31.1994 17.9702 32.221 16.6553 33.9322L10.5143 41.9238H9.02219C4.56424 41.9238 0.937408 45.5509 0.937408 50.0094V54.8631C0.937408 55.5103 1.46212 56.0349 2.10917 56.0349H7.81422C8.34819 58.3043 10.3958 59.9999 12.8349 59.9999C15.2739 59.9999 17.3216 58.3042 17.8555 56.0349H27.5946C28.1285 58.3043 30.1762 59.9999 32.6153 59.9999C35.0544 59.9999 37.1021 58.3042 37.6359 56.0349H41.4931V58.8282C41.4931 59.4754 42.0178 60 42.6649 60H47.5964C48.2434 60 48.7681 59.4754 48.7681 58.8282V29.5624H54.0545C56.8159 29.5624 59.0624 27.3159 59.0624 24.5544V5.00786C59.0626 2.24649 56.8161 0 54.0546 0ZM18.5135 35.3601C19.3879 34.2223 20.7704 33.5429 22.2115 33.5429H31.9549C33.4534 33.5429 34.8681 34.266 35.7397 35.4771L40.3784 41.9238H13.4698L18.5135 35.3601ZM3.28093 50.0094C3.28093 46.8431 5.85645 44.2673 9.02219 44.2673H22.3002V53.6914H17.8555C17.3215 51.4219 15.2739 49.7263 12.8347 49.7263C10.3956 49.7263 8.34796 51.4219 7.81399 53.6914H3.28093V50.0094ZM12.8349 57.6564C11.2831 57.6564 10.0206 56.4033 10.0206 54.8631C10.0206 53.3229 11.283 52.0698 12.8349 52.0698C14.3867 52.0698 15.6491 53.3229 15.6491 54.8631C15.6491 56.4033 14.3866 57.6564 12.8349 57.6564ZM32.6154 57.6564C31.0637 57.6564 29.8011 56.4033 29.8011 54.8631C29.8011 53.3229 31.0636 52.0698 32.6154 52.0698C34.1673 52.0698 35.4296 53.3229 35.4296 54.8631C35.4295 56.4033 34.1672 57.6564 32.6154 57.6564ZM37.6361 53.6912C37.1021 51.4218 35.0544 49.7261 32.6153 49.7261C30.1761 49.7261 28.1284 51.4218 27.5944 53.6912H24.6436V44.2672H41.4931V53.6912H37.6361ZM46.4247 57.6565H43.8368V29.5624H46.4247V57.6565ZM56.7191 24.5544C56.7191 26.0236 55.5239 27.2189 54.0547 27.2189H36.2069C34.7377 27.2189 33.5425 26.0236 33.5425 24.5544V5.00786C33.5425 3.53871 34.7377 2.34352 36.2069 2.34352H54.0546C55.5238 2.34352 56.719 3.53871 56.719 5.00786V24.5544H56.7191Z" fill="currentColor"></path>
+          <path d="M46.3749 6.94682H42.665C42.6646 6.94682 42.664 6.94682 42.6635 6.94682C42.0198 6.94108 41.4931 7.45923 41.4932 8.10288V8.11858V21.4035C41.4932 22.0276 41.9642 22.5725 42.5868 22.6129C43.2693 22.6572 43.8367 22.1166 43.8367 21.4437V16.8211C44.686 16.8165 45.7951 16.8112 46.3749 16.8112C49.1348 16.8112 51.3803 14.5986 51.3803 11.879C51.3803 9.15934 49.1348 6.94682 46.3749 6.94682ZM46.3749 14.4675C45.7979 14.4675 44.7038 14.4728 43.856 14.4774C43.8514 13.6053 43.846 12.468 43.846 11.8789C43.846 11.3808 43.843 10.1981 43.8403 9.29034H46.3749C47.8177 9.29034 49.0368 10.4758 49.0368 11.8789C49.0368 13.2822 47.8178 14.4675 46.3749 14.4675Z" fill="currentColor"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_9900_1484">
+            <rect width="60" height="60" fill="currentColor"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+      <p class=" text-site-secondary text-lg text-center font-bold">مواقف سيارات</p>
+    </div>
+    <div class=" w-full h-52 text-site-primary flex flex-col items-center bg-site-section rounded-2xl">
+      <svg class="my-10" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+        <g clip-path="url(#clip0_9900_1484)">
+          <path d="M54.0546 0H36.2069C33.4455 0 31.199 2.24649 31.199 5.00786V24.5544C31.199 27.3158 33.4455 29.5624 36.2069 29.5624H41.4933V39.4607L37.6419 34.1082C36.3312 32.2869 34.2053 31.1994 31.9549 31.1994H22.2115C20.0473 31.1994 17.9702 32.221 16.6553 33.9322L10.5143 41.9238H9.02219C4.56424 41.9238 0.937408 45.5509 0.937408 50.0094V54.8631C0.937408 55.5103 1.46212 56.0349 2.10917 56.0349H7.81422C8.34819 58.3043 10.3958 59.9999 12.8349 59.9999C15.2739 59.9999 17.3216 58.3042 17.8555 56.0349H27.5946C28.1285 58.3043 30.1762 59.9999 32.6153 59.9999C35.0544 59.9999 37.1021 58.3042 37.6359 56.0349H41.4931V58.8282C41.4931 59.4754 42.0178 60 42.6649 60H47.5964C48.2434 60 48.7681 59.4754 48.7681 58.8282V29.5624H54.0545C56.8159 29.5624 59.0624 27.3159 59.0624 24.5544V5.00786C59.0626 2.24649 56.8161 0 54.0546 0ZM18.5135 35.3601C19.3879 34.2223 20.7704 33.5429 22.2115 33.5429H31.9549C33.4534 33.5429 34.8681 34.266 35.7397 35.4771L40.3784 41.9238H13.4698L18.5135 35.3601ZM3.28093 50.0094C3.28093 46.8431 5.85645 44.2673 9.02219 44.2673H22.3002V53.6914H17.8555C17.3215 51.4219 15.2739 49.7263 12.8347 49.7263C10.3956 49.7263 8.34796 51.4219 7.81399 53.6914H3.28093V50.0094ZM12.8349 57.6564C11.2831 57.6564 10.0206 56.4033 10.0206 54.8631C10.0206 53.3229 11.283 52.0698 12.8349 52.0698C14.3867 52.0698 15.6491 53.3229 15.6491 54.8631C15.6491 56.4033 14.3866 57.6564 12.8349 57.6564ZM32.6154 57.6564C31.0637 57.6564 29.8011 56.4033 29.8011 54.8631C29.8011 53.3229 31.0636 52.0698 32.6154 52.0698C34.1673 52.0698 35.4296 53.3229 35.4296 54.8631C35.4295 56.4033 34.1672 57.6564 32.6154 57.6564ZM37.6361 53.6912C37.1021 51.4218 35.0544 49.7261 32.6153 49.7261C30.1761 49.7261 28.1284 51.4218 27.5944 53.6912H24.6436V44.2672H41.4931V53.6912H37.6361ZM46.4247 57.6565H43.8368V29.5624H46.4247V57.6565ZM56.7191 24.5544C56.7191 26.0236 55.5239 27.2189 54.0547 27.2189H36.2069C34.7377 27.2189 33.5425 26.0236 33.5425 24.5544V5.00786C33.5425 3.53871 34.7377 2.34352 36.2069 2.34352H54.0546C55.5238 2.34352 56.719 3.53871 56.719 5.00786V24.5544H56.7191Z" fill="currentColor"></path>
+          <path d="M46.3749 6.94682H42.665C42.6646 6.94682 42.664 6.94682 42.6635 6.94682C42.0198 6.94108 41.4931 7.45923 41.4932 8.10288V8.11858V21.4035C41.4932 22.0276 41.9642 22.5725 42.5868 22.6129C43.2693 22.6572 43.8367 22.1166 43.8367 21.4437V16.8211C44.686 16.8165 45.7951 16.8112 46.3749 16.8112C49.1348 16.8112 51.3803 14.5986 51.3803 11.879C51.3803 9.15934 49.1348 6.94682 46.3749 6.94682ZM46.3749 14.4675C45.7979 14.4675 44.7038 14.4728 43.856 14.4774C43.8514 13.6053 43.846 12.468 43.846 11.8789C43.846 11.3808 43.843 10.1981 43.8403 9.29034H46.3749C47.8177 9.29034 49.0368 10.4758 49.0368 11.8789C49.0368 13.2822 47.8178 14.4675 46.3749 14.4675Z" fill="currentColor"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_9900_1484">
+            <rect width="60" height="60" fill="currentColor"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+      <p class=" text-site-secondary text-lg text-center font-bold">مواقف سيارات</p>
+    </div>
+    <div class=" w-full h-52 text-site-primary flex flex-col items-center bg-site-section rounded-2xl">
+      <svg class="my-10" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+        <g clip-path="url(#clip0_9900_1484)">
+          <path d="M54.0546 0H36.2069C33.4455 0 31.199 2.24649 31.199 5.00786V24.5544C31.199 27.3158 33.4455 29.5624 36.2069 29.5624H41.4933V39.4607L37.6419 34.1082C36.3312 32.2869 34.2053 31.1994 31.9549 31.1994H22.2115C20.0473 31.1994 17.9702 32.221 16.6553 33.9322L10.5143 41.9238H9.02219C4.56424 41.9238 0.937408 45.5509 0.937408 50.0094V54.8631C0.937408 55.5103 1.46212 56.0349 2.10917 56.0349H7.81422C8.34819 58.3043 10.3958 59.9999 12.8349 59.9999C15.2739 59.9999 17.3216 58.3042 17.8555 56.0349H27.5946C28.1285 58.3043 30.1762 59.9999 32.6153 59.9999C35.0544 59.9999 37.1021 58.3042 37.6359 56.0349H41.4931V58.8282C41.4931 59.4754 42.0178 60 42.6649 60H47.5964C48.2434 60 48.7681 59.4754 48.7681 58.8282V29.5624H54.0545C56.8159 29.5624 59.0624 27.3159 59.0624 24.5544V5.00786C59.0626 2.24649 56.8161 0 54.0546 0ZM18.5135 35.3601C19.3879 34.2223 20.7704 33.5429 22.2115 33.5429H31.9549C33.4534 33.5429 34.8681 34.266 35.7397 35.4771L40.3784 41.9238H13.4698L18.5135 35.3601ZM3.28093 50.0094C3.28093 46.8431 5.85645 44.2673 9.02219 44.2673H22.3002V53.6914H17.8555C17.3215 51.4219 15.2739 49.7263 12.8347 49.7263C10.3956 49.7263 8.34796 51.4219 7.81399 53.6914H3.28093V50.0094ZM12.8349 57.6564C11.2831 57.6564 10.0206 56.4033 10.0206 54.8631C10.0206 53.3229 11.283 52.0698 12.8349 52.0698C14.3867 52.0698 15.6491 53.3229 15.6491 54.8631C15.6491 56.4033 14.3866 57.6564 12.8349 57.6564ZM32.6154 57.6564C31.0637 57.6564 29.8011 56.4033 29.8011 54.8631C29.8011 53.3229 31.0636 52.0698 32.6154 52.0698C34.1673 52.0698 35.4296 53.3229 35.4296 54.8631C35.4295 56.4033 34.1672 57.6564 32.6154 57.6564ZM37.6361 53.6912C37.1021 51.4218 35.0544 49.7261 32.6153 49.7261C30.1761 49.7261 28.1284 51.4218 27.5944 53.6912H24.6436V44.2672H41.4931V53.6912H37.6361ZM46.4247 57.6565H43.8368V29.5624H46.4247V57.6565ZM56.7191 24.5544C56.7191 26.0236 55.5239 27.2189 54.0547 27.2189H36.2069C34.7377 27.2189 33.5425 26.0236 33.5425 24.5544V5.00786C33.5425 3.53871 34.7377 2.34352 36.2069 2.34352H54.0546C55.5238 2.34352 56.719 3.53871 56.719 5.00786V24.5544H56.7191Z" fill="currentColor"></path>
+          <path d="M46.3749 6.94682H42.665C42.6646 6.94682 42.664 6.94682 42.6635 6.94682C42.0198 6.94108 41.4931 7.45923 41.4932 8.10288V8.11858V21.4035C41.4932 22.0276 41.9642 22.5725 42.5868 22.6129C43.2693 22.6572 43.8367 22.1166 43.8367 21.4437V16.8211C44.686 16.8165 45.7951 16.8112 46.3749 16.8112C49.1348 16.8112 51.3803 14.5986 51.3803 11.879C51.3803 9.15934 49.1348 6.94682 46.3749 6.94682ZM46.3749 14.4675C45.7979 14.4675 44.7038 14.4728 43.856 14.4774C43.8514 13.6053 43.846 12.468 43.846 11.8789C43.846 11.3808 43.843 10.1981 43.8403 9.29034H46.3749C47.8177 9.29034 49.0368 10.4758 49.0368 11.8789C49.0368 13.2822 47.8178 14.4675 46.3749 14.4675Z" fill="currentColor"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_9900_1484">
+            <rect width="60" height="60" fill="currentColor"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+      <p class=" text-site-secondary text-lg text-center font-bold">مواقف سيارات</p>
+    </div>
+  </div>
+</section>
+<section class="container mx-auto py-12 px-4">
+  <div class="bg-white rounded-lg shadow-md p-8">
+      <div class="flex items-center mb-6">
+          <div class="text-4xl font-bold mr-4">4.82</div>
+          <div class="flex items-center">
+              <svg class="w-6 h-6 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 1l2.67 5.39L19 7l-4 3.89 1 5.5L10 14l-6 3.5 1-5.5-4-3.89L7.33 6.39z"/></svg>
+              <svg class="w-6 h-6 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 1l2.67 5.39L19 7l-4 3.89 1 5.5L10 14l-6 3.5 1-5.5-4-3.89L7.33 6.39z"/></svg>
+              <svg class="w-6 h-6 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 1l2.67 5.39L19 7l-4 3.89 1 5.5L10 14l-6 3.5 1-5.5-4-3.89L7.33 6.39z"/></svg>
+              <svg class="w-6 h-6 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 1l2.67 5.39L19 7l-4 3.89 1 5.5L10 14l-6 3.5 1-5.5-4-3.89L7.33 6.39z"/></svg>
+              <svg class="w-6 h-6 text-yellow-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 1l2.67 5.39L19 7l-4 3.89 1 5.5L10 14l-6 3.5 1-5.5-4-3.89L7.33 6.39z"/></svg>
+          </div>
+          <span class="ml-2">Client Reviews</span>
+      </div>
+
+      <div class="flex items-center relative">
+          <button id="prevBtn" class="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-200 rounded-full p-2 hover:bg-gray-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+          </button>
+          <div id="testimonialContainer" class="flex-grow text-center">
+              <img id="testimonialImage" src="https://via.placeholder.com/80" alt="Client" class="rounded-full mx-auto mb-4 w-20 h-20 object-cover">
+              <p id="testimonialText" class="text-lg italic leading-relaxed">"Buying my first home was seamless thanks to their exceptional support. They carefully listened to my needs and found the perfect property within my budget. Their guidance and patience made the experience stress-free!"</p>
+              <p id="testimonialName" class="mt-4 font-medium">James David</p>
+          </div>
+          <button id="nextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-200 rounded-full p-2 hover:bg-gray-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          </button>
+      </div>
+  </div>
+
+  <div class="mt-12 bg-white rounded-lg shadow-md p-8">
+      <h2 class="text-2xl font-semibold mb-6">Our Partners</h2>
+      <div class="carousel-container">
+          <div class="carousel animate-scroll" style="--visible-width: 100%;">
+              <img src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/676100514e5ce8243cc7a3c6_company-logo-2.png" alt="Partner 1" class="mr-8">
+              <img src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/676100515d4c9f8eba604cf8_company-logo-4.png" alt="Partner 2" class="mr-8">
+              <img src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/676100514e5ce8243cc7a3c6_company-logo-2.png" alt="Partner 3" class="mr-8">
+              <img src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/676100514a50b6d53186965f_company-logo-6.png" alt="Partner 4" class="mr-8">
+               <img src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/676100515d4c9f8eba604cf8_company-logo-4.png" alt="Partner 5" class="mr-8">
+              <img src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/676100515d4c9f8eba604cf8_company-logo-4.png" alt="Partner 6" class="mr-8">
+              </div>
+      </div>
+  </div>
+</section>
+<section class="container max-w-[90%] my-10 py-20 px-10 bg-site-secondary rounded-2xl">
+  <div class="flex sm:flex-col gap-5 justify-between items-center mb-5">
+    <h1 class="text-5xl font-bold text-white">عملاؤنا</h1>
+    <a href="" class="flex items-center py-1 gap-3 bg-white pr-4 rounded-lg">
+      <p class="text-site-secondary text-lg font-semibold">تصفح جميع العملاء</p>
+      <div class=" bg-site-primary border border-site-primary p-2 rounded-lg mx-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+          <path d="M6 18.5L18 6.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M8.25 6.5H18V16.25" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </div>
+    </a>
+  </div>
+  <div class="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
+    <div class="w-full h-80 rounded-xl bg-[#1d202a] relative overflow-hidden agent-card">
+      <img class="absolute bottom-0" src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674c40a03fdbcae503101690_marcos-nienow.png" alt="">
+      <div class="agent-card-info flex justify-between items-center p-4 rounded-lg w-[90%] absolute bottom-5 bg-[#000000b3] backdrop-blur-md">
+        <div class="text-white">
+          <p class="text-lg font-bold">عمر عبدالكريم</p>
+          <p class="">مدير تنفيذي</p>
+        </div>
+        <div class=" text-site-primary border border-site-primary p-2 rounded-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+            <path d="M18.3706 14.7401C17.8244 14.282 14.6206 12.2533 14.0881 12.3464C13.8381 12.3908 13.6469 12.6039 13.135 13.2145C12.8983 13.5151 12.6383 13.7966 12.3575 14.0564C11.843 13.9321 11.345 13.7475 10.8738 13.5064C9.0258 12.6067 7.53289 11.1134 6.63375 9.26514C6.39265 8.79393 6.20804 8.2959 6.08375 7.78139C6.34358 7.50057 6.62507 7.24061 6.92563 7.00389C7.53562 6.49201 7.74938 6.30201 7.79375 6.05076C7.88688 5.51701 5.85625 2.31451 5.4 1.76826C5.20875 1.54201 5.035 1.39014 4.8125 1.39014C4.1675 1.39014 1.25 4.99764 1.25 5.46514C1.25 5.50326 1.3125 9.25889 6.05562 14.0845C10.8813 18.8276 14.6369 18.8901 14.675 18.8901C15.1425 18.8901 18.75 15.9726 18.75 15.3276C18.75 15.1051 18.5981 14.9314 18.3706 14.7401Z" fill="currentColor"></path>
+            <path d="M14.375 9.51514H15.625C15.6235 8.18951 15.0962 6.91861 14.1589 5.98125C13.2215 5.04389 11.9506 4.51663 10.625 4.51514V5.76514C11.6193 5.76613 12.5725 6.16154 13.2756 6.86458C13.9786 7.56763 14.374 8.52088 14.375 9.51514Z" fill="currentColor"></path>
+            <path d="M17.5 9.51514H18.75C18.7475 7.36101 17.8907 5.29583 16.3675 3.77263C14.8443 2.24944 12.7791 1.39262 10.625 1.39014V2.64014C12.4477 2.64229 14.1951 3.36731 15.484 4.65615C16.7728 5.945 17.4978 7.69243 17.5 9.51514Z" fill="currentColor"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="agent-card-info2 flex flex-col gap-4 items-center p-4 rounded-lg w-[90%] absolute bottom-5 bg-[#000000b3] backdrop-blur-md">
+        <div class="text-white">
+          <p class="text-lg font-bold text-center">عمر عبد الكريم</p>
+          <p class="text-center">مدير تنفيذي</p>
+          <div class="social-media-container flex justify-center items-center gap-3 my-5 ">
+            <div class=" text-white border bg-site-primary p-2 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                <path d="M18.3706 14.7401C17.8244 14.282 14.6206 12.2533 14.0881 12.3464C13.8381 12.3908 13.6469 12.6039 13.135 13.2145C12.8983 13.5151 12.6383 13.7966 12.3575 14.0564C11.843 13.9321 11.345 13.7475 10.8738 13.5064C9.0258 12.6067 7.53289 11.1134 6.63375 9.26514C6.39265 8.79393 6.20804 8.2959 6.08375 7.78139C6.34358 7.50057 6.62507 7.24061 6.92563 7.00389C7.53562 6.49201 7.74938 6.30201 7.79375 6.05076C7.88688 5.51701 5.85625 2.31451 5.4 1.76826C5.20875 1.54201 5.035 1.39014 4.8125 1.39014C4.1675 1.39014 1.25 4.99764 1.25 5.46514C1.25 5.50326 1.3125 9.25889 6.05562 14.0845C10.8813 18.8276 14.6369 18.8901 14.675 18.8901C15.1425 18.8901 18.75 15.9726 18.75 15.3276C18.75 15.1051 18.5981 14.9314 18.3706 14.7401Z" fill="currentColor"></path>
+                <path d="M14.375 9.51514H15.625C15.6235 8.18951 15.0962 6.91861 14.1589 5.98125C13.2215 5.04389 11.9506 4.51663 10.625 4.51514V5.76514C11.6193 5.76613 12.5725 6.16154 13.2756 6.86458C13.9786 7.56763 14.374 8.52088 14.375 9.51514Z" fill="currentColor"></path>
+                <path d="M17.5 9.51514H18.75C18.7475 7.36101 17.8907 5.29583 16.3675 3.77263C14.8443 2.24944 12.7791 1.39262 10.625 1.39014V2.64014C12.4477 2.64229 14.1951 3.36731 15.484 4.65615C16.7728 5.945 17.4978 7.69243 17.5 9.51514Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <div class=" text-white border bg-site-primary p-2 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                <path d="M18.3706 14.7401C17.8244 14.282 14.6206 12.2533 14.0881 12.3464C13.8381 12.3908 13.6469 12.6039 13.135 13.2145C12.8983 13.5151 12.6383 13.7966 12.3575 14.0564C11.843 13.9321 11.345 13.7475 10.8738 13.5064C9.0258 12.6067 7.53289 11.1134 6.63375 9.26514C6.39265 8.79393 6.20804 8.2959 6.08375 7.78139C6.34358 7.50057 6.62507 7.24061 6.92563 7.00389C7.53562 6.49201 7.74938 6.30201 7.79375 6.05076C7.88688 5.51701 5.85625 2.31451 5.4 1.76826C5.20875 1.54201 5.035 1.39014 4.8125 1.39014C4.1675 1.39014 1.25 4.99764 1.25 5.46514C1.25 5.50326 1.3125 9.25889 6.05562 14.0845C10.8813 18.8276 14.6369 18.8901 14.675 18.8901C15.1425 18.8901 18.75 15.9726 18.75 15.3276C18.75 15.1051 18.5981 14.9314 18.3706 14.7401Z" fill="currentColor"></path>
+                <path d="M14.375 9.51514H15.625C15.6235 8.18951 15.0962 6.91861 14.1589 5.98125C13.2215 5.04389 11.9506 4.51663 10.625 4.51514V5.76514C11.6193 5.76613 12.5725 6.16154 13.2756 6.86458C13.9786 7.56763 14.374 8.52088 14.375 9.51514Z" fill="currentColor"></path>
+                <path d="M17.5 9.51514H18.75C18.7475 7.36101 17.8907 5.29583 16.3675 3.77263C14.8443 2.24944 12.7791 1.39262 10.625 1.39014V2.64014C12.4477 2.64229 14.1951 3.36731 15.484 4.65615C16.7728 5.945 17.4978 7.69243 17.5 9.51514Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <div class=" text-white border bg-site-primary p-2 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                <path d="M18.3706 14.7401C17.8244 14.282 14.6206 12.2533 14.0881 12.3464C13.8381 12.3908 13.6469 12.6039 13.135 13.2145C12.8983 13.5151 12.6383 13.7966 12.3575 14.0564C11.843 13.9321 11.345 13.7475 10.8738 13.5064C9.0258 12.6067 7.53289 11.1134 6.63375 9.26514C6.39265 8.79393 6.20804 8.2959 6.08375 7.78139C6.34358 7.50057 6.62507 7.24061 6.92563 7.00389C7.53562 6.49201 7.74938 6.30201 7.79375 6.05076C7.88688 5.51701 5.85625 2.31451 5.4 1.76826C5.20875 1.54201 5.035 1.39014 4.8125 1.39014C4.1675 1.39014 1.25 4.99764 1.25 5.46514C1.25 5.50326 1.3125 9.25889 6.05562 14.0845C10.8813 18.8276 14.6369 18.8901 14.675 18.8901C15.1425 18.8901 18.75 15.9726 18.75 15.3276C18.75 15.1051 18.5981 14.9314 18.3706 14.7401Z" fill="currentColor"></path>
+                <path d="M14.375 9.51514H15.625C15.6235 8.18951 15.0962 6.91861 14.1589 5.98125C13.2215 5.04389 11.9506 4.51663 10.625 4.51514V5.76514C11.6193 5.76613 12.5725 6.16154 13.2756 6.86458C13.9786 7.56763 14.374 8.52088 14.375 9.51514Z" fill="currentColor"></path>
+                <path d="M17.5 9.51514H18.75C18.7475 7.36101 17.8907 5.29583 16.3675 3.77263C14.8443 2.24944 12.7791 1.39262 10.625 1.39014V2.64014C12.4477 2.64229 14.1951 3.36731 15.484 4.65615C16.7728 5.945 17.4978 7.69243 17.5 9.51514Z" fill="currentColor"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full h-80 rounded-xl bg-[#1d202a] relative overflow-hidden agent-card">
+      <img class="absolute bottom-0" src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674c40a03fdbcae503101690_marcos-nienow.png" alt="">
+      <div class="agent-card-info flex justify-between items-center p-4 rounded-lg w-[90%] absolute bottom-5 bg-[#000000b3] backdrop-blur-md">
+        <div class="text-white">
+          <p class="text-lg font-bold">عمر عبدالكريم</p>
+          <p class="">مدير تنفيذي</p>
+        </div>
+        <div class=" text-site-primary border border-site-primary p-2 rounded-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+            <path d="M18.3706 14.7401C17.8244 14.282 14.6206 12.2533 14.0881 12.3464C13.8381 12.3908 13.6469 12.6039 13.135 13.2145C12.8983 13.5151 12.6383 13.7966 12.3575 14.0564C11.843 13.9321 11.345 13.7475 10.8738 13.5064C9.0258 12.6067 7.53289 11.1134 6.63375 9.26514C6.39265 8.79393 6.20804 8.2959 6.08375 7.78139C6.34358 7.50057 6.62507 7.24061 6.92563 7.00389C7.53562 6.49201 7.74938 6.30201 7.79375 6.05076C7.88688 5.51701 5.85625 2.31451 5.4 1.76826C5.20875 1.54201 5.035 1.39014 4.8125 1.39014C4.1675 1.39014 1.25 4.99764 1.25 5.46514C1.25 5.50326 1.3125 9.25889 6.05562 14.0845C10.8813 18.8276 14.6369 18.8901 14.675 18.8901C15.1425 18.8901 18.75 15.9726 18.75 15.3276C18.75 15.1051 18.5981 14.9314 18.3706 14.7401Z" fill="currentColor"></path>
+            <path d="M14.375 9.51514H15.625C15.6235 8.18951 15.0962 6.91861 14.1589 5.98125C13.2215 5.04389 11.9506 4.51663 10.625 4.51514V5.76514C11.6193 5.76613 12.5725 6.16154 13.2756 6.86458C13.9786 7.56763 14.374 8.52088 14.375 9.51514Z" fill="currentColor"></path>
+            <path d="M17.5 9.51514H18.75C18.7475 7.36101 17.8907 5.29583 16.3675 3.77263C14.8443 2.24944 12.7791 1.39262 10.625 1.39014V2.64014C12.4477 2.64229 14.1951 3.36731 15.484 4.65615C16.7728 5.945 17.4978 7.69243 17.5 9.51514Z" fill="currentColor"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="agent-card-info2 flex flex-col gap-4 items-center p-4 rounded-lg w-[90%] absolute bottom-5 bg-[#000000b3] backdrop-blur-md">
+        <div class="text-white">
+          <p class="text-lg font-bold text-center">عمر عبد الكريم</p>
+          <p class="text-center">مدير تنفيذي</p>
+          <div class="social-media-container flex justify-center items-center gap-3 my-5 ">
+            <div class=" text-white border bg-site-primary p-2 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                <path d="M18.3706 14.7401C17.8244 14.282 14.6206 12.2533 14.0881 12.3464C13.8381 12.3908 13.6469 12.6039 13.135 13.2145C12.8983 13.5151 12.6383 13.7966 12.3575 14.0564C11.843 13.9321 11.345 13.7475 10.8738 13.5064C9.0258 12.6067 7.53289 11.1134 6.63375 9.26514C6.39265 8.79393 6.20804 8.2959 6.08375 7.78139C6.34358 7.50057 6.62507 7.24061 6.92563 7.00389C7.53562 6.49201 7.74938 6.30201 7.79375 6.05076C7.88688 5.51701 5.85625 2.31451 5.4 1.76826C5.20875 1.54201 5.035 1.39014 4.8125 1.39014C4.1675 1.39014 1.25 4.99764 1.25 5.46514C1.25 5.50326 1.3125 9.25889 6.05562 14.0845C10.8813 18.8276 14.6369 18.8901 14.675 18.8901C15.1425 18.8901 18.75 15.9726 18.75 15.3276C18.75 15.1051 18.5981 14.9314 18.3706 14.7401Z" fill="currentColor"></path>
+                <path d="M14.375 9.51514H15.625C15.6235 8.18951 15.0962 6.91861 14.1589 5.98125C13.2215 5.04389 11.9506 4.51663 10.625 4.51514V5.76514C11.6193 5.76613 12.5725 6.16154 13.2756 6.86458C13.9786 7.56763 14.374 8.52088 14.375 9.51514Z" fill="currentColor"></path>
+                <path d="M17.5 9.51514H18.75C18.7475 7.36101 17.8907 5.29583 16.3675 3.77263C14.8443 2.24944 12.7791 1.39262 10.625 1.39014V2.64014C12.4477 2.64229 14.1951 3.36731 15.484 4.65615C16.7728 5.945 17.4978 7.69243 17.5 9.51514Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <div class=" text-white border bg-site-primary p-2 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                <path d="M18.3706 14.7401C17.8244 14.282 14.6206 12.2533 14.0881 12.3464C13.8381 12.3908 13.6469 12.6039 13.135 13.2145C12.8983 13.5151 12.6383 13.7966 12.3575 14.0564C11.843 13.9321 11.345 13.7475 10.8738 13.5064C9.0258 12.6067 7.53289 11.1134 6.63375 9.26514C6.39265 8.79393 6.20804 8.2959 6.08375 7.78139C6.34358 7.50057 6.62507 7.24061 6.92563 7.00389C7.53562 6.49201 7.74938 6.30201 7.79375 6.05076C7.88688 5.51701 5.85625 2.31451 5.4 1.76826C5.20875 1.54201 5.035 1.39014 4.8125 1.39014C4.1675 1.39014 1.25 4.99764 1.25 5.46514C1.25 5.50326 1.3125 9.25889 6.05562 14.0845C10.8813 18.8276 14.6369 18.8901 14.675 18.8901C15.1425 18.8901 18.75 15.9726 18.75 15.3276C18.75 15.1051 18.5981 14.9314 18.3706 14.7401Z" fill="currentColor"></path>
+                <path d="M14.375 9.51514H15.625C15.6235 8.18951 15.0962 6.91861 14.1589 5.98125C13.2215 5.04389 11.9506 4.51663 10.625 4.51514V5.76514C11.6193 5.76613 12.5725 6.16154 13.2756 6.86458C13.9786 7.56763 14.374 8.52088 14.375 9.51514Z" fill="currentColor"></path>
+                <path d="M17.5 9.51514H18.75C18.7475 7.36101 17.8907 5.29583 16.3675 3.77263C14.8443 2.24944 12.7791 1.39262 10.625 1.39014V2.64014C12.4477 2.64229 14.1951 3.36731 15.484 4.65615C16.7728 5.945 17.4978 7.69243 17.5 9.51514Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <div class=" text-white border bg-site-primary p-2 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                <path d="M18.3706 14.7401C17.8244 14.282 14.6206 12.2533 14.0881 12.3464C13.8381 12.3908 13.6469 12.6039 13.135 13.2145C12.8983 13.5151 12.6383 13.7966 12.3575 14.0564C11.843 13.9321 11.345 13.7475 10.8738 13.5064C9.0258 12.6067 7.53289 11.1134 6.63375 9.26514C6.39265 8.79393 6.20804 8.2959 6.08375 7.78139C6.34358 7.50057 6.62507 7.24061 6.92563 7.00389C7.53562 6.49201 7.74938 6.30201 7.79375 6.05076C7.88688 5.51701 5.85625 2.31451 5.4 1.76826C5.20875 1.54201 5.035 1.39014 4.8125 1.39014C4.1675 1.39014 1.25 4.99764 1.25 5.46514C1.25 5.50326 1.3125 9.25889 6.05562 14.0845C10.8813 18.8276 14.6369 18.8901 14.675 18.8901C15.1425 18.8901 18.75 15.9726 18.75 15.3276C18.75 15.1051 18.5981 14.9314 18.3706 14.7401Z" fill="currentColor"></path>
+                <path d="M14.375 9.51514H15.625C15.6235 8.18951 15.0962 6.91861 14.1589 5.98125C13.2215 5.04389 11.9506 4.51663 10.625 4.51514V5.76514C11.6193 5.76613 12.5725 6.16154 13.2756 6.86458C13.9786 7.56763 14.374 8.52088 14.375 9.51514Z" fill="currentColor"></path>
+                <path d="M17.5 9.51514H18.75C18.7475 7.36101 17.8907 5.29583 16.3675 3.77263C14.8443 2.24944 12.7791 1.39262 10.625 1.39014V2.64014C12.4477 2.64229 14.1951 3.36731 15.484 4.65615C16.7728 5.945 17.4978 7.69243 17.5 9.51514Z" fill="currentColor"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full h-80 rounded-xl bg-[#1d202a] relative overflow-hidden agent-card">
+      <img class="absolute bottom-0" src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674c40a03fdbcae503101690_marcos-nienow.png" alt="">
+      <div class="agent-card-info flex justify-between items-center p-4 rounded-lg w-[90%] absolute bottom-5 bg-[#000000b3] backdrop-blur-md">
+        <div class="text-white">
+          <p class="text-lg font-bold">عمر عبدالكريم</p>
+          <p class="">مدير تنفيذي</p>
+        </div>
+        <div class=" text-site-primary border border-site-primary p-2 rounded-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+            <path d="M18.3706 14.7401C17.8244 14.282 14.6206 12.2533 14.0881 12.3464C13.8381 12.3908 13.6469 12.6039 13.135 13.2145C12.8983 13.5151 12.6383 13.7966 12.3575 14.0564C11.843 13.9321 11.345 13.7475 10.8738 13.5064C9.0258 12.6067 7.53289 11.1134 6.63375 9.26514C6.39265 8.79393 6.20804 8.2959 6.08375 7.78139C6.34358 7.50057 6.62507 7.24061 6.92563 7.00389C7.53562 6.49201 7.74938 6.30201 7.79375 6.05076C7.88688 5.51701 5.85625 2.31451 5.4 1.76826C5.20875 1.54201 5.035 1.39014 4.8125 1.39014C4.1675 1.39014 1.25 4.99764 1.25 5.46514C1.25 5.50326 1.3125 9.25889 6.05562 14.0845C10.8813 18.8276 14.6369 18.8901 14.675 18.8901C15.1425 18.8901 18.75 15.9726 18.75 15.3276C18.75 15.1051 18.5981 14.9314 18.3706 14.7401Z" fill="currentColor"></path>
+            <path d="M14.375 9.51514H15.625C15.6235 8.18951 15.0962 6.91861 14.1589 5.98125C13.2215 5.04389 11.9506 4.51663 10.625 4.51514V5.76514C11.6193 5.76613 12.5725 6.16154 13.2756 6.86458C13.9786 7.56763 14.374 8.52088 14.375 9.51514Z" fill="currentColor"></path>
+            <path d="M17.5 9.51514H18.75C18.7475 7.36101 17.8907 5.29583 16.3675 3.77263C14.8443 2.24944 12.7791 1.39262 10.625 1.39014V2.64014C12.4477 2.64229 14.1951 3.36731 15.484 4.65615C16.7728 5.945 17.4978 7.69243 17.5 9.51514Z" fill="currentColor"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="agent-card-info2 flex flex-col gap-4 items-center p-4 rounded-lg w-[90%] absolute bottom-5 bg-[#000000b3] backdrop-blur-md">
+        <div class="text-white">
+          <p class="text-lg font-bold text-center">عمر عبد الكريم</p>
+          <p class="text-center">مدير تنفيذي</p>
+          <div class="social-media-container flex justify-center items-center gap-3 my-5 ">
+            <div class=" text-white border bg-site-primary p-2 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                <path d="M18.3706 14.7401C17.8244 14.282 14.6206 12.2533 14.0881 12.3464C13.8381 12.3908 13.6469 12.6039 13.135 13.2145C12.8983 13.5151 12.6383 13.7966 12.3575 14.0564C11.843 13.9321 11.345 13.7475 10.8738 13.5064C9.0258 12.6067 7.53289 11.1134 6.63375 9.26514C6.39265 8.79393 6.20804 8.2959 6.08375 7.78139C6.34358 7.50057 6.62507 7.24061 6.92563 7.00389C7.53562 6.49201 7.74938 6.30201 7.79375 6.05076C7.88688 5.51701 5.85625 2.31451 5.4 1.76826C5.20875 1.54201 5.035 1.39014 4.8125 1.39014C4.1675 1.39014 1.25 4.99764 1.25 5.46514C1.25 5.50326 1.3125 9.25889 6.05562 14.0845C10.8813 18.8276 14.6369 18.8901 14.675 18.8901C15.1425 18.8901 18.75 15.9726 18.75 15.3276C18.75 15.1051 18.5981 14.9314 18.3706 14.7401Z" fill="currentColor"></path>
+                <path d="M14.375 9.51514H15.625C15.6235 8.18951 15.0962 6.91861 14.1589 5.98125C13.2215 5.04389 11.9506 4.51663 10.625 4.51514V5.76514C11.6193 5.76613 12.5725 6.16154 13.2756 6.86458C13.9786 7.56763 14.374 8.52088 14.375 9.51514Z" fill="currentColor"></path>
+                <path d="M17.5 9.51514H18.75C18.7475 7.36101 17.8907 5.29583 16.3675 3.77263C14.8443 2.24944 12.7791 1.39262 10.625 1.39014V2.64014C12.4477 2.64229 14.1951 3.36731 15.484 4.65615C16.7728 5.945 17.4978 7.69243 17.5 9.51514Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <div class=" text-white border bg-site-primary p-2 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                <path d="M18.3706 14.7401C17.8244 14.282 14.6206 12.2533 14.0881 12.3464C13.8381 12.3908 13.6469 12.6039 13.135 13.2145C12.8983 13.5151 12.6383 13.7966 12.3575 14.0564C11.843 13.9321 11.345 13.7475 10.8738 13.5064C9.0258 12.6067 7.53289 11.1134 6.63375 9.26514C6.39265 8.79393 6.20804 8.2959 6.08375 7.78139C6.34358 7.50057 6.62507 7.24061 6.92563 7.00389C7.53562 6.49201 7.74938 6.30201 7.79375 6.05076C7.88688 5.51701 5.85625 2.31451 5.4 1.76826C5.20875 1.54201 5.035 1.39014 4.8125 1.39014C4.1675 1.39014 1.25 4.99764 1.25 5.46514C1.25 5.50326 1.3125 9.25889 6.05562 14.0845C10.8813 18.8276 14.6369 18.8901 14.675 18.8901C15.1425 18.8901 18.75 15.9726 18.75 15.3276C18.75 15.1051 18.5981 14.9314 18.3706 14.7401Z" fill="currentColor"></path>
+                <path d="M14.375 9.51514H15.625C15.6235 8.18951 15.0962 6.91861 14.1589 5.98125C13.2215 5.04389 11.9506 4.51663 10.625 4.51514V5.76514C11.6193 5.76613 12.5725 6.16154 13.2756 6.86458C13.9786 7.56763 14.374 8.52088 14.375 9.51514Z" fill="currentColor"></path>
+                <path d="M17.5 9.51514H18.75C18.7475 7.36101 17.8907 5.29583 16.3675 3.77263C14.8443 2.24944 12.7791 1.39262 10.625 1.39014V2.64014C12.4477 2.64229 14.1951 3.36731 15.484 4.65615C16.7728 5.945 17.4978 7.69243 17.5 9.51514Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <div class=" text-white border bg-site-primary p-2 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                <path d="M18.3706 14.7401C17.8244 14.282 14.6206 12.2533 14.0881 12.3464C13.8381 12.3908 13.6469 12.6039 13.135 13.2145C12.8983 13.5151 12.6383 13.7966 12.3575 14.0564C11.843 13.9321 11.345 13.7475 10.8738 13.5064C9.0258 12.6067 7.53289 11.1134 6.63375 9.26514C6.39265 8.79393 6.20804 8.2959 6.08375 7.78139C6.34358 7.50057 6.62507 7.24061 6.92563 7.00389C7.53562 6.49201 7.74938 6.30201 7.79375 6.05076C7.88688 5.51701 5.85625 2.31451 5.4 1.76826C5.20875 1.54201 5.035 1.39014 4.8125 1.39014C4.1675 1.39014 1.25 4.99764 1.25 5.46514C1.25 5.50326 1.3125 9.25889 6.05562 14.0845C10.8813 18.8276 14.6369 18.8901 14.675 18.8901C15.1425 18.8901 18.75 15.9726 18.75 15.3276C18.75 15.1051 18.5981 14.9314 18.3706 14.7401Z" fill="currentColor"></path>
+                <path d="M14.375 9.51514H15.625C15.6235 8.18951 15.0962 6.91861 14.1589 5.98125C13.2215 5.04389 11.9506 4.51663 10.625 4.51514V5.76514C11.6193 5.76613 12.5725 6.16154 13.2756 6.86458C13.9786 7.56763 14.374 8.52088 14.375 9.51514Z" fill="currentColor"></path>
+                <path d="M17.5 9.51514H18.75C18.7475 7.36101 17.8907 5.29583 16.3675 3.77263C14.8443 2.24944 12.7791 1.39262 10.625 1.39014V2.64014C12.4477 2.64229 14.1951 3.36731 15.484 4.65615C16.7728 5.945 17.4978 7.69243 17.5 9.51514Z" fill="currentColor"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full h-80 rounded-xl bg-[#1d202a] relative overflow-hidden agent-card">
+      <img class="absolute bottom-0" src="https://cdn.prod.website-files.com/674c0094b14bdea27078dffc/674c40a03fdbcae503101690_marcos-nienow.png" alt="">
+      <div class="agent-card-info flex justify-between items-center p-4 rounded-lg w-[90%] absolute bottom-5 bg-[#000000b3] backdrop-blur-md">
+        <div class="text-white">
+          <p class="text-lg font-bold">عمر عبدالكريم</p>
+          <p class="">مدير تنفيذي</p>
+        </div>
+        <div class=" text-site-primary border border-site-primary p-2 rounded-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+            <path d="M18.3706 14.7401C17.8244 14.282 14.6206 12.2533 14.0881 12.3464C13.8381 12.3908 13.6469 12.6039 13.135 13.2145C12.8983 13.5151 12.6383 13.7966 12.3575 14.0564C11.843 13.9321 11.345 13.7475 10.8738 13.5064C9.0258 12.6067 7.53289 11.1134 6.63375 9.26514C6.39265 8.79393 6.20804 8.2959 6.08375 7.78139C6.34358 7.50057 6.62507 7.24061 6.92563 7.00389C7.53562 6.49201 7.74938 6.30201 7.79375 6.05076C7.88688 5.51701 5.85625 2.31451 5.4 1.76826C5.20875 1.54201 5.035 1.39014 4.8125 1.39014C4.1675 1.39014 1.25 4.99764 1.25 5.46514C1.25 5.50326 1.3125 9.25889 6.05562 14.0845C10.8813 18.8276 14.6369 18.8901 14.675 18.8901C15.1425 18.8901 18.75 15.9726 18.75 15.3276C18.75 15.1051 18.5981 14.9314 18.3706 14.7401Z" fill="currentColor"></path>
+            <path d="M14.375 9.51514H15.625C15.6235 8.18951 15.0962 6.91861 14.1589 5.98125C13.2215 5.04389 11.9506 4.51663 10.625 4.51514V5.76514C11.6193 5.76613 12.5725 6.16154 13.2756 6.86458C13.9786 7.56763 14.374 8.52088 14.375 9.51514Z" fill="currentColor"></path>
+            <path d="M17.5 9.51514H18.75C18.7475 7.36101 17.8907 5.29583 16.3675 3.77263C14.8443 2.24944 12.7791 1.39262 10.625 1.39014V2.64014C12.4477 2.64229 14.1951 3.36731 15.484 4.65615C16.7728 5.945 17.4978 7.69243 17.5 9.51514Z" fill="currentColor"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="agent-card-info2 flex flex-col gap-4 items-center p-4 rounded-lg w-[90%] absolute bottom-5 bg-[#000000b3] backdrop-blur-md">
+        <div class="text-white">
+          <p class="text-lg font-bold text-center">عمر عبد الكريم</p>
+          <p class="text-center">مدير تنفيذي</p>
+          <div class="social-media-container flex justify-center items-center gap-3 my-5 ">
+            <div class=" text-white border bg-site-primary p-2 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                <path d="M18.3706 14.7401C17.8244 14.282 14.6206 12.2533 14.0881 12.3464C13.8381 12.3908 13.6469 12.6039 13.135 13.2145C12.8983 13.5151 12.6383 13.7966 12.3575 14.0564C11.843 13.9321 11.345 13.7475 10.8738 13.5064C9.0258 12.6067 7.53289 11.1134 6.63375 9.26514C6.39265 8.79393 6.20804 8.2959 6.08375 7.78139C6.34358 7.50057 6.62507 7.24061 6.92563 7.00389C7.53562 6.49201 7.74938 6.30201 7.79375 6.05076C7.88688 5.51701 5.85625 2.31451 5.4 1.76826C5.20875 1.54201 5.035 1.39014 4.8125 1.39014C4.1675 1.39014 1.25 4.99764 1.25 5.46514C1.25 5.50326 1.3125 9.25889 6.05562 14.0845C10.8813 18.8276 14.6369 18.8901 14.675 18.8901C15.1425 18.8901 18.75 15.9726 18.75 15.3276C18.75 15.1051 18.5981 14.9314 18.3706 14.7401Z" fill="currentColor"></path>
+                <path d="M14.375 9.51514H15.625C15.6235 8.18951 15.0962 6.91861 14.1589 5.98125C13.2215 5.04389 11.9506 4.51663 10.625 4.51514V5.76514C11.6193 5.76613 12.5725 6.16154 13.2756 6.86458C13.9786 7.56763 14.374 8.52088 14.375 9.51514Z" fill="currentColor"></path>
+                <path d="M17.5 9.51514H18.75C18.7475 7.36101 17.8907 5.29583 16.3675 3.77263C14.8443 2.24944 12.7791 1.39262 10.625 1.39014V2.64014C12.4477 2.64229 14.1951 3.36731 15.484 4.65615C16.7728 5.945 17.4978 7.69243 17.5 9.51514Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <div class=" text-white border bg-site-primary p-2 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                <path d="M18.3706 14.7401C17.8244 14.282 14.6206 12.2533 14.0881 12.3464C13.8381 12.3908 13.6469 12.6039 13.135 13.2145C12.8983 13.5151 12.6383 13.7966 12.3575 14.0564C11.843 13.9321 11.345 13.7475 10.8738 13.5064C9.0258 12.6067 7.53289 11.1134 6.63375 9.26514C6.39265 8.79393 6.20804 8.2959 6.08375 7.78139C6.34358 7.50057 6.62507 7.24061 6.92563 7.00389C7.53562 6.49201 7.74938 6.30201 7.79375 6.05076C7.88688 5.51701 5.85625 2.31451 5.4 1.76826C5.20875 1.54201 5.035 1.39014 4.8125 1.39014C4.1675 1.39014 1.25 4.99764 1.25 5.46514C1.25 5.50326 1.3125 9.25889 6.05562 14.0845C10.8813 18.8276 14.6369 18.8901 14.675 18.8901C15.1425 18.8901 18.75 15.9726 18.75 15.3276C18.75 15.1051 18.5981 14.9314 18.3706 14.7401Z" fill="currentColor"></path>
+                <path d="M14.375 9.51514H15.625C15.6235 8.18951 15.0962 6.91861 14.1589 5.98125C13.2215 5.04389 11.9506 4.51663 10.625 4.51514V5.76514C11.6193 5.76613 12.5725 6.16154 13.2756 6.86458C13.9786 7.56763 14.374 8.52088 14.375 9.51514Z" fill="currentColor"></path>
+                <path d="M17.5 9.51514H18.75C18.7475 7.36101 17.8907 5.29583 16.3675 3.77263C14.8443 2.24944 12.7791 1.39262 10.625 1.39014V2.64014C12.4477 2.64229 14.1951 3.36731 15.484 4.65615C16.7728 5.945 17.4978 7.69243 17.5 9.51514Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <div class=" text-white border bg-site-primary p-2 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                <path d="M18.3706 14.7401C17.8244 14.282 14.6206 12.2533 14.0881 12.3464C13.8381 12.3908 13.6469 12.6039 13.135 13.2145C12.8983 13.5151 12.6383 13.7966 12.3575 14.0564C11.843 13.9321 11.345 13.7475 10.8738 13.5064C9.0258 12.6067 7.53289 11.1134 6.63375 9.26514C6.39265 8.79393 6.20804 8.2959 6.08375 7.78139C6.34358 7.50057 6.62507 7.24061 6.92563 7.00389C7.53562 6.49201 7.74938 6.30201 7.79375 6.05076C7.88688 5.51701 5.85625 2.31451 5.4 1.76826C5.20875 1.54201 5.035 1.39014 4.8125 1.39014C4.1675 1.39014 1.25 4.99764 1.25 5.46514C1.25 5.50326 1.3125 9.25889 6.05562 14.0845C10.8813 18.8276 14.6369 18.8901 14.675 18.8901C15.1425 18.8901 18.75 15.9726 18.75 15.3276C18.75 15.1051 18.5981 14.9314 18.3706 14.7401Z" fill="currentColor"></path>
+                <path d="M14.375 9.51514H15.625C15.6235 8.18951 15.0962 6.91861 14.1589 5.98125C13.2215 5.04389 11.9506 4.51663 10.625 4.51514V5.76514C11.6193 5.76613 12.5725 6.16154 13.2756 6.86458C13.9786 7.56763 14.374 8.52088 14.375 9.51514Z" fill="currentColor"></path>
+                <path d="M17.5 9.51514H18.75C18.7475 7.36101 17.8907 5.29583 16.3675 3.77263C14.8443 2.24944 12.7791 1.39262 10.625 1.39014V2.64014C12.4477 2.64229 14.1951 3.36731 15.484 4.65615C16.7728 5.945 17.4978 7.69243 17.5 9.51514Z" fill="currentColor"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container max-w-[90%] my-10 py-20 px-10 bg-site-section rounded-2xl relative overflow-hidden">
+  <img 
+    src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/6748088406a2a07bd3fea205_Book%20a%20Consultation%20Bg.png"
+    class=" absolute"    
+  >
+  <div class="flex sm:flex-col justify-center gap-10 items-center p-10 sm:p-2 relative z-10">
+    <img src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/6747ef19d471bf472d92cd98_Book%20a%20Consultation%20Banner-img.png" alt="man">
+    <div>
+      <h1 class="text-5xl md:text-4xl sm:text-2xl font-bold mb-12">احجز حلول للأعمال</h1>
+      <div class="flex sm:flex-col gap-3">
+        <input 
+          type="text"
+          placeholder="الاسم"
+          class="bg-white text-site-secondary border border-[#e3e8ef] rounded-xl min-h-14 py-2 px-6 text-lg w-1/2 sm:w-full"
+        >
+        <input 
+          type="text"
+          placeholder="الايميل"
+          class="bg-white text-site-secondary border border-[#e3e8ef] rounded-xl min-h-14 py-2 px-6 text-lg w-1/2 sm:w-full"
+        >
+      </div>
+      <input 
+        type="text"
+        placeholder="رقم الجوال"
+        class="bg-white text-site-secondary border border-[#e3e8ef] rounded-xl min-h-14 py-2 px-6 text-lg w-full my-4"
+      >
+      <textarea 
+        class="bg-white text-site-secondary border border-[#e3e8ef] rounded-xl min-h-64 py-2 px-2 text-lg w-full my-4"
+        placeholder="اكتب رسالتك"
+      >
+      </textarea>
+      <a href="" class="flex items-center py-1 gap-18 bg-site-secondary pr-4 rounded-lg w-fit">
+        <p class="text-white text-lg font-semibold">ارسال</p>
+        <div class=" bg-white border border-site-secondary text-site-secondary p-2 rounded-lg mx-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M6 18.5L18 6.5" stroke="#0d0e13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M8.25 6.5H18V16.25" stroke="#0d0e13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+    <footer class="bg-white lg:px-32 px-8 mt-10">
+      <div class="footer-links-container flex lg:flex-row flex-col gap-8 justify-evenly items-start lg:items-center">
+        <a href="" class="text-site-text-secondary">التوعية الأمنية</a>
+        <div class="w-px h-3 bg-site-text-secondary hidden lg:block"></div>
+        <a href="" class="text-site-text-secondary">إشعار الخصوصية</a>
+        <div class="w-px h-3 bg-site-text-secondary hidden lg:block"></div>
+        <a href="" class="text-site-text-secondary">وظائف</a>
+        <div class="w-px h-3 bg-site-text-secondary hidden lg:block"></div>
+        <a href="" class="text-site-text-secondary">تواصل معنا</a>
+        <div class="w-px h-3 bg-site-text-secondary hidden lg:block"></div>
+        <a href="" class="text-site-text-secondary">مبادئ حماية العملاء</a>
+        <div class="w-px h-3 bg-site-text-secondary hidden lg:block"></div>
+        <a href="" class="text-site-text-secondary">الإبلاغ عن شكوى</a>
+      </div>
+      <div class="footer-follow-us-container my-20 lg:text-center lg:py-0 py-8 md:border-y sm:border-y">
+        <a href="" class="text-site-text-secondary text-lg font-bold">تابعنا</a>
+      </div>
+      <div class="footer-logo-container">
+        <img src="img/logo.png" alt="logo" class="w-36 mx-auto">
+      </div>
+      <p class="text-site-text-secondary text-sm text-center my-5">جميع الحقوق محفوظة © اتقان برو</p>
+    </footer>
+</body>
+<script>
+  AOS.init();
+
+  const tabs = document.querySelectorAll('button[data-tab]');
+const tabContent = document.querySelectorAll('[data-info]');
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+        const targetId = tab.getAttribute('data-tab');
+        tabs.forEach(btn => btn.classList.remove('active'));
+        tab.classList.add('active');
+
+        tabContent.forEach(content => {
+            if (content.id === targetId) {
+                content.classList.remove('hidden');
+                content.classList.add('opacity-0');
+                setTimeout(() => {
+                    content.classList.add('opacity-100');
+                }, 10);
+            } else {
+                content.classList.add('hidden');
+            }
+        });
+    });
+});
+
+
+const testimonials = [
+        { image: "https://via.placeholder.com/80", text: "Testimonial 1.", name: "Client 1" },
+        { image: "https://via.placeholder.com/80", text: "Testimonial 2.", name: "Client 2" },
+        { image: "https://via.placeholder.com/80", text: "Testimonial 3.", name: "Client 3" },
+    ];
+
+    let currentTestimonial = 0;
+    const testimonialImage = document.getElementById('testimonialImage');
+    const testimonialText = document.getElementById('testimonialText');
+    const testimonialName = document.getElementById('testimonialName');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+
+    function updateTestimonial() {
+        testimonialImage.src = testimonials[currentTestimonial].image;
+        testimonialText.textContent = testimonials[currentTestimonial].text;
+        testimonialName.textContent = testimonials[currentTestimonial].name;
+    }
+
+    nextBtn.addEventListener('click', () => {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        updateTestimonial();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentTestimonial = (currentTestcurrentTestimonial - 1 + testimonials.length) % testimonials.length;
+        updateTestimonial();
+    });
+
+    updateTestimonial(); // Initial display
+
+    // Carousel for partner images (Improved)
+    const carousel = document.querySelector('.carousel');
+    const images = carousel.querySelectorAll('img');
+    const imageWidth = images[0].offsetWidth + 16; // Include margin
+    let scrollAmount = 0;
+
+    function scrollCarousel() {
+        scrollAmount += imageWidth;
+        if (scrollAmount > carousel.scrollWidth) {
+            scrollAmount = 0; // Reset to beginning
+        }
+        carousel.style.transform = `translateX(-${scrollAmount}px)`;
+    }
+    // Set interval for smooth auto scrolling
+    setInterval(scrollCarousel, 1000); // Adjust speed as needed
+
+    // Make carousel responsive
+    function updateCarouselVisibility() {
+        const carouselContainer = document.querySelector('.carousel-container');
+        const visibleWidth = carouselContainer.offsetWidth;
+        carousel.style.setProperty('--visible-width', `${visibleWidth}px`);
+    }
+
+    window.addEventListener('resize', updateCarouselVisibility);
+    updateCarouselVisibility(); // Initial setup
+</script>
+</html>
