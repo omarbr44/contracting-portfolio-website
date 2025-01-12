@@ -27,37 +27,39 @@
     </style>
 </head>
 <body style="direction: rtl;font-family: Tajawal, sans-serif;">
-  <nav class="bg-gradient-to-r from-site-shapes to-cyan-600 lg:py-8 py-4 px-16 sm:px-6 flex justify-between w-full fixed top-0 z-[39]"
-       data-aos="fade-up" data-aos-duration="1500">
-    <div class="flex items-center ">
-        <a href="" class=" bg-white p-2 rounded-lg">
-            <img src="img/logo.png" alt="logo" width="120">
-        </a>
-        <div class="mr-8 text-xl text-white lg:block hidden">
-            <a href="about-us-ar.html">
-                عنا
-            </a>
-            <span class="mx-4">|</span>
-            <a href="index.html">
-                English
-            </a>
-        </div>
-    </div>
-    <div class="lg:flex items-center hidden">
-        <button class="text-white text-xl ml-8" onclick="showWaitlistModal()">حالة الانتظار</button>
-        <a href="" class="bg-white px-8 py-2 text-xl text-site-shapes rounded-xl">حمل التطبيق</a>
-    </div>
-    <button type="button" onclick="showHideNav()" class="nav-button lg:hidden relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-        <span class="absolute -inset-0.5"></span>
-        <span class="sr-only">Open main menu</span>
-        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
-    </button>
-    <section id="mobile-nav" class="hidden">
+  <div class="w-full flex justify-center">
+    <nav class="bg-site-secondary rounded-xl w-[75%] sm:w-[90%] lg:py-4 py-4 px-16 sm:px-6 flex justify-between absolute top-16 z-[39]"
+         data-aos="fade-up" data-aos-duration="1500">
+      <div class="flex items-center ">
+          <a href="" class="">
+              <img src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/6745a2f8a68826ee20971c6b_Nav-logo-white.png" alt="logo" width="120">
+          </a>
+          <div class="mr-6 text-xl text-white lg:block hidden">
+              <a href="index.html">
+                  English
+              </a>
+          </div>
+      </div>
+      <div class="lg:flex items-center hidden">
+          <a href="" class="text-white text-xl text-site-shapes rounded-xl">الرئيسية</a>
+          <span class="mx-8 text-white">|</span>
+          <a href="" class="text-white text-xl text-site-shapes rounded-xl">عنا</a>
+          <span class="mx-8 text-white">|</span>
+          <a href="" class="text-white text-xl ml-8 text-site-shapes rounded-xl">المدونة</a>
+          <a href="" class="bg-white px-8 py-2 text-xl text-site-shapes rounded-xl">حمل التطبيق</a>
+      </div>
+      <button type="button" onclick="showHideNav()" class="nav-button lg:hidden relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="absolute -inset-0.5"></span>
+          <span class="sr-only">Open main menu</span>
+          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+      </button>
+    </nav>
+    <section id="mobile-nav" class="hidden fixed top-0 left-0 w-full">
         <div class="flex items-center justify-between h-1/6">
             <a href="" >
-                <img src="img/logo.png" alt="logo" width="110">
+                <img src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/6745a2f8a68826ee20971c6b_Nav-logo-white.png" alt="logo" width="110">
             </a>
             <button type="button" onclick="showHideNav()" class="nav-button lg:hidden relative inline-flex items-center justify-center rounded-md p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black" aria-controls="mobile-menu" aria-expanded="false">
                 <span class="absolute -inset-0.5"></span>
@@ -67,18 +69,19 @@
                 </svg>
             </button>
         </div>
-        <div class="flex flex-col justify-between h-5/6">
-            <div class="text-2xl text-site-primary flex flex-col gap-7 mt-1">
-                <a href="about-us-ar.html">عنا</a>
-                <a href="index.html">English</a>
+        <div class="flex flex-col just ify-between h-5/6">
+            <div class="text-2xl text-wite flex flex-col gap-7 mt-4 text-white mb-10">
+              <a href="index.html">English</a>
             </div>
-            <div class="flex flex-col gap-5 w-full text-center mb-8">
-                <a href="" class="text-xl w-full bg-site-shapes text-white rounded-xl py-3">حمل التطبيق</a>
-                <button style="border: 1px solid;" onclick="showWaitlistModal()" class="text-xl w-full bg-white text-site-shapes border-site-shapes rounded-xl py-3">حالة الانتظار</button>
+            <div class="flex flex-col w-full mb-8">
+                <a href="" class="text-xl w-full bg-site-shapes text-white rounded-xl py-3 mb-4">الرئيسية</a>
+                <a href="" class="text-xl w-full bg-site-shapes text-white rounded-xl py-3 mb-4">عنا</a>
+                <a href="" class="text-xl w-full bg-site-shapes text-white rounded-xl py-3 mb-36">المدونة</a>
+                <button style="border: 1px solid;" class="text-xl w-full bg-white text-site-shapes border-site-shapes rounded-xl py-3">حالة الانتظار</button>
             </div>
         </div>
     </section>
-</nav>
+  </div>
 <section class="hero-section h-[120vh] relative m-6 sm:m-2">
   <div data-poster-url="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a%2F674d7c6410556e8afd177598_propiz-hero-bg-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a%2F674d7c6410556e8afd177598_propiz-hero-bg-transcode.mp4,https://cdn.prod.website-files.com/6743f5d1f34136345172b17a%2F674d7c6410556e8afd177598_propiz-hero-bg-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="hero-bg-video">
     <video id="c505e51a-9262-74f7-657f-ccc952c80bf5-video" autoplay="" loop="" style="background-image:url(&quot;https://cdn.prod.website-files.com/6743f5d1f34136345172b17a%2F674d7c6410556e8afd177598_propiz-hero-bg-poster-00001.jpg&quot;);" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
@@ -228,13 +231,13 @@
   </div>
 </section>
   <div class="container mx-auto my-10">
-    <div class="flex justify-center items-center mb-8">
+    <h1 class="text-5xl sm:text-3 font-bold text-center mt-32 mb-12">احدث الممتلكات</h1>
+    <div class="flex justify-center items-center mb-16">
         <button class="px-4 py-2 w-1/4 rounded-md bg-gray-200 text-gray-700  mr-2 active" data-tab="all">الكل</button>
         <button class="px-4 py-2 w-1/4 rounded-md bg-gray-200 text-gray-700 mr-2" data-tab="apartments">شقق</button>
         <button class="px-4 py-2 w-1/4 rounded-md bg-gray-200 text-gray-700 mr-2" data-tab="villas">فلل</button>
         <button class="px-4 py-2 w-1/4 rounded-md bg-gray-200 text-gray-700 mr-2" data-tab="resort">مجمعات</button>
     </div>
-
     <div id="all" class="grid grid-cols-2 sm:grid-cols-1 gap-4" data-info="all">
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
           <div class="overflow-hidden card-img-container">
@@ -466,7 +469,12 @@
       </div>
         </div>
 </div>
-<section class="container mx-auto my-10"> 
+<section class="container max-w-[90%] my-10 py-20 px-10 sm:px-2"> 
+  <div class="flex flex-col lg:flex-row gap-10 justify-between items-center">
+    <h1 class="w-1/2 sm:w-[80%] my-24 sm:my-6 text-4xl sm:text-2xl font-bold sm:text-center md:text-center">شغوف بكونك مختلفًا ومخلصًا</h1>
+    <p class="lg:w-[40%] w-[90%] text-lg sm:text-center md:text-center px-9 sm:mb-10">يكمن شغفنا في تقديم حلول عقارية فريدة من نوعها مع البقاء مخلصين لأحلام عملائنا وأهدافهم. نحن نعيد تعريف السوق مع الالتزام بالتميز وتقديم نتائج قائمة على الثقة.
+    </p>
+  </div>
   <div class="grid grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-4">
     <div class=" w-full h-52 text-site-primary flex flex-col items-center bg-site-section rounded-2xl">
       <svg class="my-10" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
@@ -610,7 +618,7 @@
     </div>
   </div>
 </section>
-<section class="container mx-auto py-12 px-4">
+<!-- <section class="container mx-auto py-12 px-4">
   <div class="bg-white rounded-lg shadow-md p-8">
       <div class="flex items-center mb-6">
           <div class="text-4xl font-bold mr-4">4.82</div>
@@ -652,7 +660,7 @@
               </div>
       </div>
   </div>
-</section>
+</section> -->
 <section class="container max-w-[90%] my-10 py-20 px-10 bg-site-secondary rounded-2xl">
   <div class="flex sm:flex-col gap-5 justify-between items-center mb-5">
     <h1 class="text-5xl font-bold text-white">عملاؤنا</h1>
@@ -892,27 +900,120 @@
     </div>
   </div>
 </section>
+<section class="container max-w-[90%] my-10 py-20 px-10">
+  <div class="flex sm:flex-col justify-between items-center gap-6">
+    <h1 class="text-5xl sm:text-3xl font-bold">الأخبار والمقالات</h1>
+    <a href="" class="flex items-center py-1 gap-8 bg-site-secondary pr-4 rounded-lg w-fit">
+      <p class="text-white text-lg font-semibold">تصفح جميع المقالات</p>
+      <div class=" bg-white border border-site-secondary text-site-secondary p-2 rounded-lg mx-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+          <path d="M6 18.5L18 6.5" stroke="#0d0e13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M8.25 6.5H18V16.25" stroke="#0d0e13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </div>
+    </a>
+  </div>
+  <div class="flex flex-col lg:flex-row justify-evenly items-center gap-8 mt-20">
+    <div class="lg:w-1/3 w-full">
+      <img src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/6746d73d65758cf637456162_about-us-img-2.jpg" 
+           alt="img"
+           class="w-full rounded-xl"
+      >
+      <h1 class="text-xl font-bold mt-4">شغوف بكونك مختلفًا ومخلصًا</h1>
+      <p class="text-site-p mt-4">يكمن شغفنا في تقديم حلول عقارية فريدة من نوعها مع البقاء مخلصين لأحلام عملائنا وأهدافهم. نحن نعيد تعريف السوق مع الالتزام بالتميز وتقديم نتائج قائمة على الثقة.</p>
+      <a href="" class="flex items-center mt-4 py-1 gap-8 bg-site-secondary pr-4 rounded-lg w-fit">
+        <p class="text-white text-lg font-semibold">اقرأ اكثر</p>
+        <div class=" bg-white border border-site-secondary text-site-secondary p-2 rounded-lg mx-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M6 18.5L18 6.5" stroke="#0d0e13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M8.25 6.5H18V16.25" stroke="#0d0e13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      </a>
+    </div>
+    <div class="lg:w-1/3 w-full">
+      <img src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/6746d73d65758cf637456162_about-us-img-2.jpg" 
+           alt="img"
+           class="w-full rounded-xl"
+      >
+      <h1 class="text-xl font-bold mt-4">شغوف بكونك مختلفًا ومخلصًا</h1>
+      <p class="text-site-p mt-4">يكمن شغفنا في تقديم حلول عقارية فريدة من نوعها مع البقاء مخلصين لأحلام عملائنا وأهدافهم. نحن نعيد تعريف السوق مع الالتزام بالتميز وتقديم نتائج قائمة على الثقة.</p>
+      <a href="" class="flex items-center mt-4 py-1 gap-8 bg-site-secondary pr-4 rounded-lg w-fit">
+        <p class="text-white text-lg font-semibold">اقرأ اكثر</p>
+        <div class=" bg-white border border-site-secondary text-site-secondary p-2 rounded-lg mx-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M6 18.5L18 6.5" stroke="#0d0e13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M8.25 6.5H18V16.25" stroke="#0d0e13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      </a>
+    </div>
+    <div class="lg:w-1/3 w-full">
+      <img src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/6746d73d65758cf637456162_about-us-img-2.jpg" 
+           alt="img"
+           class="w-full rounded-xl"
+      >
+      <h1 class="text-xl font-bold mt-4">شغوف بكونك مختلفًا ومخلصًا</h1>
+      <p class="text-site-p mt-4">يكمن شغفنا في تقديم حلول عقارية فريدة من نوعها مع البقاء مخلصين لأحلام عملائنا وأهدافهم. نحن نعيد تعريف السوق مع الالتزام بالتميز وتقديم نتائج قائمة على الثقة.</p>
+      <a href="" class="flex items-center mt-4 py-1 gap-8 bg-site-secondary pr-4 rounded-lg w-fit">
+        <p class="text-white text-lg font-semibold">اقرأ اكثر</p>
+        <div class=" bg-white border border-site-secondary text-site-secondary p-2 rounded-lg mx-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M6 18.5L18 6.5" stroke="#0d0e13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M8.25 6.5H18V16.25" stroke="#0d0e13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="container max-w-[90%] my-10 py-20 px-10 bg-site-section rounded-2xl relative overflow-hidden">
+  <img 
+    src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/6748088406a2a07bd3fea205_Book%20a%20Consultation%20Bg.png"
+    class=" absolute"    
+  >
+  <div class="flex sm:flex-col justify-between items-center gap-6 relative z-10">
+    <h1 class="text-5xl sm:text-3xl font-bold sm:text-center sm:mb-4">النشرة الإخبارية للحصول على تحديث آخر الأخبار</h1>
+    <div class="flex sm:flex-col items-center gap-4">
+      <input 
+      type="text"
+      placeholder="الايميل"
+      class="bg-white text-site-secondary border border-[#e3e8ef] rounded-xl min-h-14 py-2 px-6 text-lg"
+    >
+    <a href="" class="flex items-center py-1 gap-8 bg-site-secondary pr-4 rounded-lg w-fit">
+      <p class="text-white text-lg font-semibold">اشتراك</p>
+      <div class=" bg-white border border-site-secondary text-site-secondary p-2 rounded-lg mx-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+          <path d="M6 18.5L18 6.5" stroke="#0d0e13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M8.25 6.5H18V16.25" stroke="#0d0e13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </div>
+    </a>
+    </div>
+  </div>
+</section>
     <footer class="bg-white lg:px-32 px-8 mt-10">
-      <div class="footer-links-container flex lg:flex-row flex-col gap-8 justify-evenly items-start lg:items-center">
-        <a href="" class="text-site-text-secondary">التوعية الأمنية</a>
-        <div class="w-px h-3 bg-site-text-secondary hidden lg:block"></div>
-        <a href="" class="text-site-text-secondary">إشعار الخصوصية</a>
-        <div class="w-px h-3 bg-site-text-secondary hidden lg:block"></div>
-        <a href="" class="text-site-text-secondary">وظائف</a>
-        <div class="w-px h-3 bg-site-text-secondary hidden lg:block"></div>
-        <a href="" class="text-site-text-secondary">تواصل معنا</a>
-        <div class="w-px h-3 bg-site-text-secondary hidden lg:block"></div>
-        <a href="" class="text-site-text-secondary">مبادئ حماية العملاء</a>
-        <div class="w-px h-3 bg-site-text-secondary hidden lg:block"></div>
-        <a href="" class="text-site-text-secondary">الإبلاغ عن شكوى</a>
+      <div class="footer-links-container flex lg:flex-row flex-col gap-8 justify-evenly items-start">
+        <div class="flex flex-col w-1/3 sm:w-full sm:items-center">
+          <a href="" class=" text-2xl font-bold mb-4">التوعية الأمنية</a>
+          <a href="" class="text-site-p text-lg">إشعار الخصوصية</a>
+          <a href="" class="text-site-p text-lg">وظائف</a>
+          <a href="" class="text-site-p text-lg">تواصل معنا</a>
+          <a href="" class="text-site-p text-lg">وظائف</a>
+        </div>
+        <div class="flex flex-col w-1/3 sm:w-full sm:items-center">
+          <a href="" class=" text-2xl font-bold mb-4">التوعية الأمنية</a>
+          <a href="" class="text-site-p text-lg">إشعار الخصوصية</a>
+          <a href="" class="text-site-p text-lg">وظائف</a>
+          <a href="" class="text-site-p text-lg">تواصل معنا</a>
+          <a href="" class="text-site-p text-lg">وظائف</a>
+        </div>
+        <div class=" w-1/3 sm:w-full sm:items-center">
+          <img src="https://cdn.prod.website-files.com/6743f5d1f34136345172b17a/6745a2f8a68826ee20971c6b_Nav-logo-white.png" alt="logo">
+          <p class="text-site-p mt-8">يكمن شغفنا في تقديم حلول عقارية فريدة من نوعها مع البقاء مخلصين لأحلام عملائنا وأهدافهم. نحن نعيد تعريف السوق مع الالتزام بالتميز وتقديم نتائج قائمة على الثقة.</p>
+        </div>
       </div>
-      <div class="footer-follow-us-container my-20 lg:text-center lg:py-0 py-8 md:border-y sm:border-y">
-        <a href="" class="text-site-text-secondary text-lg font-bold">تابعنا</a>
-      </div>
-      <div class="footer-logo-container">
-        <img src="img/logo.png" alt="logo" class="w-36 mx-auto">
-      </div>
-      <p class="text-site-text-secondary text-sm text-center my-5">جميع الحقوق محفوظة © اتقان برو</p>
+      <p class="text-site-p text-sm text-center my-5">جميع الحقوق محفوظة ©</p>
     </footer>
 </body>
 <script>
